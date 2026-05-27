@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CHEMISTRIE — N°002 · The Editorial Issue</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="chemistrie-v2.css" />
+
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<!-- ─── Edition strip ─── -->
+<div class="edition-strip">
+  <span>N°002 · <em>The Editorial Issue</em></span>
+  <span>Vol. I · Spring/Summer 2026</span>
+  <span>Houston · <em>$0.00</em></span>
+</div>
+
+<!-- ─── Nav ─── -->
+<nav class="mag-nav">
+  <div class="mag-nav__links">
+    <a href="#toc">Contents</a>
+    <a href="#manifesto">Manifesto</a>
+    <a href="#anatomy">Anatomy</a>
+    <a href="#interview">Interview</a>
+  </div>
+  <a href="../chemistrie.html" class="mag-nav__logo">CHEMISTRIE</a>
+  <div class="mag-nav__actions">
+    <a href="#">Account</a>
+    <a href="#" class="mag-nav__bag">Bag <span>·</span> 2</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ─── 01 · COVER SPREAD ─── -->
+<section class="mag-hero" data-screen-label="01 Cover">
+  <div class="mag-hero__copy">
+    <div>
+      <div class="mag-hero__issue">
+        <span>Cover Story</span>
+        <em>N°002</em>
+      </div>
+      <p class="mag-hero__feature">A pharmacist's quiet luxury, in twelve formulas.</p>
+
+      <h1 class="mag-hero__title r">
+        Made <em>by</em><br/>
+        pharmacists.<sup>01</sup><br/>
+        Made <span class="stroke">for</span> the<br/>
+        women they <em>love.</em>
+      </h1>
+
+      <p class="mag-hero__deck r">
+        An editorial of pharmaceutical-grade actives, hand-numbered batches, and the love letters that built a maison from a compounding bench in Houston.
+      </p>
+    </div>
+
+    <div class="mag-hero__byline">
+      <span class="mag-hero__byline-author">Photographed by — Studio Faune</span>
+      <span>Pages <em>04–112</em></span>
+      <a href="#toc" class="mag-hero__cta">Open the issue →</a>
+    </div>
+  </div>
+
+  <div class="mag-hero__visual">
+    <span class="mag-hero__page-no">— 04</span>
+    <div class="mag-hero__photo">
+      <svg viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="herog" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#dec39a"/>
+            <stop offset="1" stop-color="#a78a5e"/>
+          </linearGradient>
+          <linearGradient id="glassA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2a5a44"/>
+            <stop offset="1" stop-color="#0e2118"/>
+          </linearGradient>
+          <linearGradient id="hl2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <rect width="600" height="800" fill="url(#herog)"/>
+        <rect y="560" width="600" height="240" fill="#8a6f48" opacity=".4"/>
+        <ellipse cx="300" cy="610" rx="180" ry="22" fill="#0e2118" opacity=".18"/>
+        <rect x="276" y="120" width="48" height="56" rx="4" fill="#1a3a2d"/>
+        <rect x="270" y="172" width="60" height="14" rx="2" fill="#c8aa7a"/>
+        <rect x="282" y="186" width="36" height="32" fill="url(#glassA)"/>
+        <path d="M210 224 Q210 212 240 212 H360 Q390 212 390 224 V570 Q390 605 360 605 H240 Q210 605 210 570 Z" fill="url(#glassA)"/>
+        <rect x="226" y="252" width="14" height="290" rx="7" fill="url(#hl2)"/>
+        <rect x="222" y="360" width="156" height="180" fill="#f9f4ed"/>
+        <text x="300" y="392" text-anchor="middle" font-family="Cormorant Garamond" font-size="20" font-style="italic" fill="#1a3a2d" letter-spacing="3">No. 01</text>
+        <line x1="252" y1="404" x2="348" y2="404" stroke="#c8aa7a" stroke-width="0.8"/>
+        <text x="300" y="438" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#1a3a2d" letter-spacing="4">RENEWAL</text>
+        <text x="300" y="456" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#1a3a2d" letter-spacing="4">SERUM</text>
+        <line x1="262" y1="476" x2="338" y2="476" stroke="#c8aa7a" stroke-width="0.4"/>
+        <text x="300" y="496" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#6c8f7b" letter-spacing="2.5">PHARMACIST FORMULATED</text>
+        <text x="300" y="510" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#6c8f7b" letter-spacing="2.5">HOUSTON · 30 ML</text>
+        <text x="300" y="528" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="9" fill="#a78a5e">batch n° 027 / 200</text>
+        <text x="120" y="180" font-size="20" fill="#1a3a2d" opacity=".4">✦</text>
+        <text x="480" y="280" font-size="14" fill="#1a3a2d" opacity=".3">✦</text>
+        <text x="80" y="500" font-size="16" fill="#1a3a2d" opacity=".3">✦</text>
+      </svg>
+    </div>
+    <div class="mag-hero__overlay">
+      <span>Photo 01/12 · Studio Faune</span>
+      <span>RENEWAL SERUM N°01</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 02 · TABLE OF CONTENTS ─── -->
+<section class="mag-toc" id="toc" data-screen-label="02 Contents">
+  <div class="mag-toc__head">
+    <span class="mag-toc__eyebrow">— Page 06 —</span>
+    <h2 class="mag-toc__title">In this <em>issue.</em></h2>
+    <p class="mag-toc__intro">Nine chapters of pharmacy, patience and the women we love. Read in order, or open at any page that finds you.</p>
+  </div>
+
+  <ol class="mag-toc__list">
+    <li class="mag-toc__row r">
+      <span class="mag-toc__num">01.</span>
+      <div class="mag-toc__entry">
+        <h3>The Cover Story</h3>
+        <p>Renewal Serum N°01, photographed under afternoon light by Studio Faune.</p>
+      </div>
+      <span class="mag-toc__dots"></span>
+      <span class="mag-toc__page">p. 04</span>
+    </li>
+    <li class="mag-toc__row r">
+      <span class="mag-toc__num">02.</span>
+      <div class="mag-toc__entry">
+        <h3>The Manifesto</h3>
+        <p>Why two pharmacists left the bench, then quietly built a maison around it.</p>
+      </div>
+      <span class="mag-toc__dots"></span>
+      <span class="mag-toc__page">p. 08</span>
+    </li>
+    <li class="mag-toc__row r">
+      <span class="mag-toc__num">03.</span>
+      <div class="mag-toc__entry">
+        <h3>Anatomy of a Bottle</h3>
+        <p>Eight numbered annotations on the Renewal Serum, milligram for milligram.</p>
+      </div>
+      <span class="mag-toc__dots"></span>
+      <span class="mag-toc__page">p. 24</span>
+    </li>
+    <li class="mag-toc__row r">
+      <span class="mag-toc__num">04.</span>
+      <div class="mag-toc__entry">
+        <h3>A Photo Essay</h3>
+        <p>Four frames of the compounding lab in late spring. Glass, hands, paper, light.</p>
+      </div>
+      <span class="mag-toc__dots"></span>
+      <span class="mag-toc__page">p. 36</span>
+    </li>
+    <li class="mag-toc__row r">
+      <span class="mag-toc__num">05.</span>
+      <div class="mag-toc__entry">
+        <h3>The Interview</h3>
+        <p>Dr. A and Dr. M, in conversation. On dose, on dignity, on the women they love.</p>
+      </div>
+      <span class="mag-toc__dots"></span>
+      <span class="mag-toc__page">p. 64</span>
+    </li>
+    <li class="mag-toc__row r">
+      <span class="mag-toc__num">06.</span>
+      <div class="mag-toc__entry">
+        <h3>The Index</h3>
+        <p>An A–Z of every active in the house. Footnoted, sourced, never approximated.</p>
+      </div>
+      <span class="mag-toc__dots"></span>
+      <span class="mag-toc__page">p. 88</span>
+    </li>
+    <li class="mag-toc__row r">
+      <span class="mag-toc__num">07.</span>
+      <div class="mag-toc__entry">
+        <h3>Become a Subscriber</h3>
+        <p>The card, the letter, the standing invitation to every numbered batch.</p>
+      </div>
+      <span class="mag-toc__dots"></span>
+      <span class="mag-toc__page">p. 108</span>
+    </li>
+  </ol>
+</section>
+
+<!-- ─── 03 · MANIFESTO ─── -->
+<section class="mag-manifesto" id="manifesto" data-screen-label="03 Manifesto">
+  <aside class="mag-manifesto__col">
+    <em>Page 08</em><br/>
+    Manifesto<br/>—<br/>Two doctors,<br/>one bench,<br/>twelve formulas.
+  </aside>
+
+  <article class="mag-manifesto__body">
+    <span class="mag-manifesto__eyebrow">— Manifesto · 1,140 words —</span>
+    <h2 class="mag-manifesto__title r">
+      We did not set out to <em>start a brand.</em><br/>
+      We set out to keep a promise.
+    </h2>
+    <div class="mag-manifesto__lead r">
+      <p>
+        <span class="mag-manifesto__dropcap">A</span>
+        decade behind the same compounding bench in Houston, weighing actives by the milligram for the women in our families who had been failed — politely, repeatedly — by everything on the shelf. Wives wanted retinol that didn't burn. Mothers wanted vitamin C that didn't oxidise in a week. Best friends wanted a moisturiser they could hand down.
+      </p>
+      <p>
+        So we began, quietly, in concentrations the industry deemed too expensive to mass-produce. CHEMISTRIE is what happened when our patient list became a waiting list, and our waiting list outgrew the lab.
+      </p>
+      <p>
+        Twelve formulas. Hand-numbered. Compounded by pharmacists. Tested on the women we love before it is ever offered to you.
+      </p>
+    </div>
+  </article>
+
+  <aside class="mag-manifesto__col mag-manifesto__col--right">
+    <em>Established</em><br/>2026<br/>—<br/>HOUSTON · TX<br/>LOT 027 / 200<br/>—<br/>Issue 002
+  </aside>
+</section>
+
+<!-- ─── 04 · ANATOMY OF A BOTTLE ─── -->
+<section class="mag-anatomy" id="anatomy" data-screen-label="04 Anatomy">
+  <div class="mag-anatomy__head">
+    <span class="mag-anatomy__eyebrow">— Page 24 · Anatomy —</span>
+    <h2 class="mag-anatomy__title r">A bottle, <em>dissected.</em></h2>
+    <p class="mag-anatomy__intro r">Eight numbered annotations on the Renewal Serum N°01. What it is. What it isn't. Why every milligram landed where it did.</p>
+  </div>
+
+  <div class="mag-anatomy__board">
+    <!-- Center: big bottle illustration -->
+    <div class="mag-anatomy__bottle">
+      <svg viewBox="0 0 400 700" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="aglass" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3d6b54"/>
+            <stop offset=".55" stop-color="#1a3a2d"/>
+            <stop offset="1" stop-color="#0e2118"/>
+          </linearGradient>
+          <linearGradient id="ahl" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".42"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- cap -->
+        <rect x="160" y="40" width="80" height="74" rx="6" fill="#c8aa7a"/>
+        <rect x="156" y="114" width="88" height="14" rx="2" fill="#a78a5e"/>
+        <!-- neck -->
+        <rect x="170" y="128" width="60" height="34" fill="url(#aglass)"/>
+        <!-- body -->
+        <path d="M90 170 Q90 156 130 156 H270 Q310 156 310 170 V630 Q310 660 280 660 H120 Q90 660 90 630 Z" fill="url(#aglass)"/>
+        <!-- highlight -->
+        <rect x="110" y="200" width="18" height="380" rx="9" fill="url(#ahl)"/>
+        <!-- label -->
+        <rect x="118" y="340" width="164" height="220" fill="#f9f4ed"/>
+        <text x="200" y="380" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="24" fill="#1a3a2d" letter-spacing="3">No. 01</text>
+        <line x1="146" y1="394" x2="254" y2="394" stroke="#c8aa7a" stroke-width="0.8"/>
+        <text x="200" y="430" text-anchor="middle" font-family="Cormorant Garamond" font-size="16" fill="#1a3a2d" letter-spacing="4">RENEWAL</text>
+        <text x="200" y="450" text-anchor="middle" font-family="Cormorant Garamond" font-size="16" fill="#1a3a2d" letter-spacing="4">SERUM</text>
+        <line x1="156" y1="472" x2="244" y2="472" stroke="#c8aa7a" stroke-width="0.4"/>
+        <text x="200" y="494" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6c8f7b" letter-spacing="2.5">PHARMACIST FORMULATED</text>
+        <text x="200" y="510" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6c8f7b" letter-spacing="2.5">HOUSTON · 30 ML</text>
+        <text x="200" y="538" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#a78a5e">batch n° 027 / 200</text>
+      </svg>
+    </div>
+
+    <!-- Annotations -->
+    <div class="mag-anatomy__notes mag-anatomy__notes--left">
+      <div class="mag-anatomy__note r" style="--y: 4%;">
+        <span class="mag-anatomy__pin">01.</span>
+        <div>
+          <h4>Brass weighted cap</h4>
+          <p>14 g of artisan-finished brass. Designed to sit upright on a marble counter for a decade.</p>
+        </div>
+      </div>
+      <div class="mag-anatomy__note r" style="--y: 22%;">
+        <span class="mag-anatomy__pin">02.</span>
+        <div>
+          <h4>Nitrogen-sealed neck</h4>
+          <p>Filled under nitrogen and crimped within ninety seconds. The active never meets oxygen.</p>
+        </div>
+      </div>
+      <div class="mag-anatomy__note r" style="--y: 48%;">
+        <span class="mag-anatomy__pin">03.</span>
+        <div>
+          <h4>Letterpress label</h4>
+          <p>One press at a time, on cotton card. The italic No. 01 is hand-set, not printed.</p>
+        </div>
+      </div>
+      <div class="mag-anatomy__note r" style="--y: 74%;">
+        <span class="mag-anatomy__pin">04.</span>
+        <div>
+          <h4>Pharmacist countersign</h4>
+          <p>Initials of the compounding pharmacist on duty. Filed against your batch number in the lab log.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mag-anatomy__notes mag-anatomy__notes--right">
+      <div class="mag-anatomy__note r" style="--y: 8%;">
+        <span class="mag-anatomy__pin">05.</span>
+        <div>
+          <h4>UV-blocking glass, 4mm</h4>
+          <p>A double-walled forest tint. Cuts visible light to 0.4% — actives stay potent for the full year.</p>
+        </div>
+      </div>
+      <div class="mag-anatomy__note r" style="--y: 30%;">
+        <span class="mag-anatomy__pin">06.</span>
+        <div>
+          <h4>Retinaldehyde at 0.05%</h4>
+          <p>Eleven times faster than retinol. Half the irritation. The dose only a pharmacist would risk.</p>
+        </div>
+      </div>
+      <div class="mag-anatomy__note r" style="--y: 56%;">
+        <span class="mag-anatomy__pin">07.</span>
+        <div>
+          <h4>Niacinamide at 4%</h4>
+          <p>The barrier insurance behind the retinaldehyde. Quiet, daily, undramatic improvement.</p>
+        </div>
+      </div>
+      <div class="mag-anatomy__note r" style="--y: 80%;">
+        <span class="mag-anatomy__pin">08.</span>
+        <div>
+          <h4>Hand-blown base, Houston</h4>
+          <p>The slight base ripple is the glassblower's signature. No two bottles in a batch are identical.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 05 · PHOTO ESSAY DIPTYCH ─── -->
+<section class="mag-essay" data-screen-label="05 Photo Essay">
+  <div class="mag-essay__head">
+    <span class="mag-essay__eyebrow">— Page 36 · Photo Essay —</span>
+    <h2 class="mag-essay__title r">Four <em>frames.</em></h2>
+    <p class="mag-essay__intro r">An afternoon at the compounding bench, in late spring. Glass, hands, paper, light.</p>
+  </div>
+
+  <div class="mag-essay__grid">
+
+    <figure class="mag-essay__frame mag-essay__frame--tall">
+      <div class="mag-essay__photo">
+        <svg viewBox="0 0 500 700" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="es1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dec39a"/><stop offset="1" stop-color="#8a6f48"/></linearGradient>
+          </defs>
+          <rect width="500" height="700" fill="url(#es1)"/>
+          <!-- hand pouring -->
+          <ellipse cx="250" cy="500" rx="180" ry="20" fill="#1a3a2d" opacity=".18"/>
+          <rect x="200" y="200" width="100" height="280" rx="6" fill="#1a3a2d"/>
+          <rect x="220" y="320" width="60" height="130" fill="#f9f4ed"/>
+          <text x="250" y="350" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#1a3a2d">No. 01</text>
+          <!-- droplet -->
+          <circle cx="250" cy="180" r="6" fill="#c8aa7a" opacity=".7"/>
+          <text x="40" y="660" font-family="Cormorant Garamond" font-style="italic" font-size="18" fill="#1a3a2d">Frame I. — pouring.</text>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="mag-essay__cap-no">.01</span>
+        <p>Dr. M pouring N°01 from the mother batch into individual 30ml bottles. Two hundred bottles, an afternoon's work.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="mag-essay__frame mag-essay__frame--square">
+      <div class="mag-essay__photo">
+        <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="es2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d6b54"/><stop offset="1" stop-color="#1a3a2d"/></linearGradient>
+          </defs>
+          <rect width="500" height="500" fill="url(#es2)"/>
+          <!-- hands -->
+          <ellipse cx="200" cy="280" rx="80" ry="50" fill="#dec39a"/>
+          <ellipse cx="320" cy="300" rx="80" ry="50" fill="#dec39a"/>
+          <rect x="180" y="220" width="180" height="14" rx="7" fill="#c8aa7a"/>
+          <text x="40" y="470" font-family="Cormorant Garamond" font-style="italic" font-size="18" fill="#c8aa7a">Frame II. — hands.</text>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="mag-essay__cap-no">.02</span>
+        <p>The compounding hands. Dr. A's left, Dr. M's right, in a moment of agreement on the final viscosity.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="mag-essay__frame mag-essay__frame--square">
+      <div class="mag-essay__photo">
+        <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice">
+          <rect width="500" height="500" fill="#ebe3d2"/>
+          <!-- paper batch log -->
+          <g transform="rotate(-4 250 250)">
+            <rect x="100" y="120" width="300" height="280" fill="#f9f4ed"/>
+            <line x1="120" y1="160" x2="380" y2="160" stroke="#1a3a2d" stroke-width="1"/>
+            <text x="120" y="155" font-family="Cormorant Garamond" font-style="italic" font-size="20" fill="#1a3a2d">Batch Log — N°027</text>
+            <line x1="120" y1="195" x2="380" y2="195" stroke="#a78a5e" stroke-width="0.4"/>
+            <line x1="120" y1="220" x2="380" y2="220" stroke="#a78a5e" stroke-width="0.4"/>
+            <line x1="120" y1="245" x2="380" y2="245" stroke="#a78a5e" stroke-width="0.4"/>
+            <line x1="120" y1="270" x2="380" y2="270" stroke="#a78a5e" stroke-width="0.4"/>
+            <line x1="120" y1="295" x2="380" y2="295" stroke="#a78a5e" stroke-width="0.4"/>
+            <text x="380" y="380" text-anchor="end" font-family="Cormorant Garamond" font-style="italic" font-size="16" fill="#1a3a2d">— Dr. A</text>
+          </g>
+          <text x="40" y="470" font-family="Cormorant Garamond" font-style="italic" font-size="18" fill="#1a3a2d">Frame III. — paper.</text>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="mag-essay__cap-no">.03</span>
+        <p>The batch log. Every gram, every minute, every initial. Paper, never spreadsheet — at the pharmacist's insistence.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="mag-essay__frame mag-essay__frame--tall">
+      <div class="mag-essay__photo">
+        <svg viewBox="0 0 500 700" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="es4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8aa7a"/><stop offset="1" stop-color="#dec39a"/></linearGradient>
+          </defs>
+          <rect width="500" height="700" fill="url(#es4)"/>
+          <!-- light beams -->
+          <path d="M0 0 L500 0 L500 600 L0 700 Z" fill="#fefaf4" opacity=".25"/>
+          <path d="M0 100 L500 100 L500 500 L0 600 Z" fill="#fefaf4" opacity=".22"/>
+          <!-- bottle silhouette -->
+          <rect x="200" y="300" width="100" height="280" rx="4" fill="#1a3a2d"/>
+          <rect x="220" y="380" width="60" height="100" fill="#f9f4ed"/>
+          <text x="40" y="660" font-family="Cormorant Garamond" font-style="italic" font-size="18" fill="#1a3a2d">Frame IV. — light.</text>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="mag-essay__cap-no">.04</span>
+        <p>The west window at 4:42pm. The exact moment Dr. M decides every batch is photographed. The light is never the same twice.</p>
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ─── 06 · INTERVIEW ─── -->
+<section class="mag-interview" id="interview" data-screen-label="06 Interview">
+  <div class="mag-interview__visual">
+    <svg viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="iv" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#0e2118"/>
+          <stop offset="1" stop-color="#1a3a2d"/>
+        </linearGradient>
+      </defs>
+      <rect width="600" height="700" fill="url(#iv)"/>
+      <circle cx="220" cy="260" r="100" fill="#c8aa7a" opacity=".7"/>
+      <path d="M100 700 Q100 480 220 480 Q340 480 340 700 Z" fill="#c8aa7a" opacity=".7"/>
+      <circle cx="420" cy="320" r="100" fill="#6c8f7b" opacity=".55"/>
+      <path d="M300 700 Q300 540 420 540 Q540 540 540 700 Z" fill="#6c8f7b" opacity=".55"/>
+      <text x="40" y="660" font-family="Cormorant Garamond" font-style="italic" font-size="22" fill="#c8aa7a">Dr. A &amp; Dr. M — photographed in the lab</text>
+    </svg>
+    <div class="mag-interview__caption">
+      <span>The Pharmacists</span>
+      <span><em>Photograph by</em> — Studio Faune, 03.04.26</span>
+    </div>
+  </div>
+
+  <div class="mag-interview__copy">
+    <span class="mag-interview__kicker">— Page 64 · Interview</span>
+    <h2 class="mag-interview__h r">A <em>conversation</em><br/>with the bench.</h2>
+
+    <div class="mag-interview__qa">
+      <div>
+        <p class="mag-interview__q">— Why pharmacists, why now?</p>
+        <p class="mag-interview__a">"Because the industry sold us serums but never the dose. We weighed it ourselves until our family no longer needed to ask which one to use. CHEMISTRIE is just that — the dose, written down."</p>
+      </div>
+      <div>
+        <p class="mag-interview__q">— What did you refuse to compromise?</p>
+        <p class="mag-interview__a">"Concentration. The whole industry is built on whispering '0.05%' on the back of a bottle and trusting nobody reads the small print. We chose to start with the small print, then design the bottle around it."</p>
+      </div>
+      <div>
+        <p class="mag-interview__q">— And the women you love?</p>
+        <p class="mag-interview__a">"They are the standard. If a formula does not make her say, on the second night, 'something has changed,' it does not leave the bench."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 07 · A-Z GLOSSARY INDEX ─── -->
+<section class="mag-index" data-screen-label="07 Index">
+  <div class="mag-index__head">
+    <span class="mag-index__eyebrow">— Page 88 · The Index —</span>
+    <h2 class="mag-index__title r">An <em>A–Z</em> of every<br/>ingredient we trust.</h2>
+    <p class="mag-index__intro r">Sourced, footnoted, never approximated. Cross-referenced against the batch log of every bottle since N°001.</p>
+  </div>
+
+  <div class="mag-index__columns">
+    <div class="mag-index__column">
+      <h3 class="mag-index__letter">A</h3>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Allantoin <em>·</em> 1%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 12</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Ascorbic Acid, L- <em>·</em> 15%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 23</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Azelaic Acid <em>·</em> 10%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 31</span>
+      </div>
+
+      <h3 class="mag-index__letter">B</h3>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Bakuchiol <em>·</em> 1%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 14</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Beta-Glucan <em>·</em> 5%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 21</span>
+      </div>
+
+      <h3 class="mag-index__letter">C</h3>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Calendula <em>·</em> 3%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 09</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Centella Asiatica <em>·</em> 5%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 18</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Ceramide NP/AP/EOP</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 27</span>
+      </div>
+    </div>
+
+    <div class="mag-index__column">
+      <h3 class="mag-index__letter">F — H</h3>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Ferulic Acid <em>·</em> 0.5%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 26</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Glycerin, kosher <em>·</em> 8%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 33</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Hyaluronic Acid, 3-MW</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 41</span>
+      </div>
+
+      <h3 class="mag-index__letter">M — N</h3>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Madecassoside <em>·</em> 2%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 19</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Mandelic Acid <em>·</em> 8%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 44</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Niacinamide <em>·</em> 4%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 17</span>
+      </div>
+
+      <h3 class="mag-index__letter">P</h3>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Panthenol <em>·</em> 5%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 55</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Peptide-3, copper-bound</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 58</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Peptide-5, signal</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 61</span>
+      </div>
+    </div>
+
+    <div class="mag-index__column">
+      <h3 class="mag-index__letter">R — S</h3>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Retinaldehyde <em>·</em> 0.05%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 04</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Retinol, encap. <em>·</em> 0.3%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 06</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Salicylic Acid <em>·</em> 2%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 47</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Squalane, plant <em>·</em> 100%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 68</span>
+      </div>
+
+      <h3 class="mag-index__letter">T — Z</h3>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Tranexamic Acid <em>·</em> 3%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 71</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Tocopherol, mixed</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 76</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Urea, dermatologic <em>·</em> 5%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 79</span>
+      </div>
+      <div class="mag-index__entry r">
+        <span class="mag-index__name">Zinc PCA <em>·</em> 1%</span>
+        <span class="mag-index__dots"></span>
+        <span class="mag-index__pg">p. 83</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 08 · SUBSCRIBER CARD ─── -->
+<section class="mag-subscriber" data-screen-label="08 Subscriber">
+  <div class="mag-subscriber__inner">
+    <div class="mag-subscriber__copy">
+      <span class="mag-subscriber__eyebrow">— Page 108 · Become a Subscriber —</span>
+      <h2 class="mag-subscriber__title r">
+        A standing<br/>
+        invitation to <em>every</em><br/>
+        numbered batch.
+      </h2>
+      <p class="mag-subscriber__lede">A printed card. A pharmacist's letter, every quarter. First call on every limited compounding before it reaches the website.</p>
+      <ul class="mag-subscriber__perks">
+        <li><span>i.</span> First call on every numbered batch (avg. 200 units).</li>
+        <li><span>ii.</span> Quarterly letter on the bench. Hand-signed, hand-stamped.</li>
+        <li><span>iii.</span> A printed card with your member number, mailed to your home.</li>
+        <li><span>iv.</span> A pharmacist on speed-dial. We answer within 24 hours.</li>
+      </ul>
+      <a href="#" class="mag-subscriber__cta">Reserve member n°0428 →</a>
+    </div>
+
+    <div class="mag-subscriber__card-wrap">
+      <div class="mag-subscriber__card r">
+        <div class="mag-subscriber__card-head">
+          <span class="mag-subscriber__card-brand">CHEMISTRIE</span>
+          <span class="mag-subscriber__card-rx">Rx</span>
+        </div>
+        <div class="mag-subscriber__card-num">
+          <span>Member n°</span>
+          <strong>0 4 2 8</strong>
+        </div>
+        <div class="mag-subscriber__card-foot">
+          <div>
+            <span>Member since</span>
+            <strong>02 · 2026</strong>
+          </div>
+          <div>
+            <span>Allotted batches / yr</span>
+            <strong>04</strong>
+          </div>
+        </div>
+        <div class="mag-subscriber__card-sig">— Dr. A &amp; Dr. M, founding pharmacists</div>
+        <span class="mag-subscriber__card-corner mag-subscriber__card-corner--tl"></span>
+        <span class="mag-subscriber__card-corner mag-subscriber__card-corner--tr"></span>
+        <span class="mag-subscriber__card-corner mag-subscriber__card-corner--bl"></span>
+        <span class="mag-subscriber__card-corner mag-subscriber__card-corner--br"></span>
+      </div>
+      <p class="mag-subscriber__card-caption">— Mailed to your address on enrolment. Heavy cotton card, hand-numbered.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 09 · COLOPHON FOOTER ─── -->
+<footer class="mag-colophon">
+  <div class="mag-colophon__masthead">
+    <span class="mag-colophon__brand">CHEMISTRIE</span>
+    <p class="mag-colophon__tag">An editorial, in twelve formulas. Published by hand from Houston, since 2026.</p>
+  </div>
+
+  <div class="mag-colophon__grid">
+    <div class="mag-colophon__col">
+      <h4>— Editorial —</h4>
+      <p>Editor-in-chief — Dr. M</p>
+      <p>Chief compounder — Dr. A</p>
+      <p>Photography — Studio Faune</p>
+      <p>Type — Cormorant Garamond, JetBrains Mono</p>
+    </div>
+    <div class="mag-colophon__col">
+      <h4>— Subscriptions —</h4>
+      <p>Quarterly letter — complimentary</p>
+      <p>Batch reservation — for members</p>
+      <p>Skin consultation — pharmacist@chemistrie.co</p>
+    </div>
+    <div class="mag-colophon__col">
+      <h4>— Production —</h4>
+      <p>Compounded in Houston, TX</p>
+      <p>Filled in 200-unit batches</p>
+      <p>Glass blown locally</p>
+      <p>Cards letterpress-printed</p>
+    </div>
+    <div class="mag-colophon__col">
+      <h4>— Correspondence —</h4>
+      <p>1402 Heights Boulevard</p>
+      <p>Houston, TX 77008</p>
+      <p>hello@chemistrie.co</p>
+      <p>(713) 555-0142</p>
+    </div>
+  </div>
+
+  <div class="mag-colophon__bar">
+    <span>© Chemistrie LLC · 2026 · All rights reserved.</span>
+    <span>Issue N°002 · Spring/Summer · 108 pages.</span>
+    <span>Pressed on Munken Pure 130g.</span>
+  </div>
+</footer>
+
+</main>
+
+<script src="chemistrie-v2.js"></script>
+</body>
+</html>

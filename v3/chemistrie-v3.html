@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CHEMISTRIE — The Concierge</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="chemistrie-v3.css" />
+
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<!-- Concierge top bar -->
+<div class="con-bar">
+  <span class="con-bar__pulse">A pharmacist is on the line — <em>average reply 3 min</em></span>
+  <span>Houston · 04:42 PM CT · Open</span>
+</div>
+
+<!-- Nav -->
+<nav class="con-nav" id="conNav">
+  <div class="con-nav__links">
+    <a href="#quiz">Skin Quiz</a>
+    <a href="#compare">Before / After</a>
+    <a href="#builder">Build a Ritual</a>
+    <a href="#drop">Drop 027</a>
+  </div>
+  <a href="../chemistrie.html" class="con-nav__logo">CHEMISTRIE</a>
+  <div class="con-nav__actions">
+    <a href="#book" class="con-nav__concierge">Speak to a Pharmacist</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ─── 01 · Cinematic Hero ─── -->
+<section class="cin-hero" data-screen-label="01 Cinematic Hero">
+  <div class="cin-hero__bg">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="cinBg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0a1812"/>
+          <stop offset=".5" stop-color="#0e2118"/>
+          <stop offset="1" stop-color="#1a3a2d"/>
+        </linearGradient>
+        <linearGradient id="cinGold" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#dec39a"/>
+          <stop offset="1" stop-color="#a78a5e"/>
+        </linearGradient>
+        <linearGradient id="cinGlass" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3d6b54"/>
+          <stop offset=".55" stop-color="#1a3a2d"/>
+          <stop offset="1" stop-color="#0a1812"/>
+        </linearGradient>
+        <radialGradient id="cinGlow" cx="0.7" cy="0.4" r="0.6">
+          <stop offset="0" stop-color="#c8aa7a" stop-opacity=".25"/>
+          <stop offset="1" stop-color="#c8aa7a" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1600" height="900" fill="url(#cinBg)"/>
+      <rect width="1600" height="900" fill="url(#cinGlow)"/>
+      <!-- atmospheric particles -->
+      <g opacity=".5">
+        <circle cx="240" cy="200" r="2" fill="#c8aa7a"/>
+        <circle cx="420" cy="160" r="1.4" fill="#c8aa7a"/>
+        <circle cx="780" cy="240" r="1" fill="#c8aa7a"/>
+        <circle cx="1080" cy="320" r="2" fill="#c8aa7a"/>
+        <circle cx="1320" cy="180" r="1.6" fill="#c8aa7a"/>
+        <circle cx="1480" cy="380" r="1" fill="#c8aa7a"/>
+        <circle cx="180" cy="520" r="1.6" fill="#c8aa7a"/>
+        <circle cx="600" cy="600" r="1.2" fill="#c8aa7a"/>
+        <circle cx="1240" cy="640" r="2" fill="#c8aa7a"/>
+      </g>
+      <!-- bottle, dramatic right -->
+      <g transform="translate(1080 250)">
+        <rect x="-40" y="0" width="80" height="60" rx="4" fill="url(#cinGold)"/>
+        <rect x="-46" y="60" width="92" height="14" rx="2" fill="#a78a5e"/>
+        <path d="M-110 90 Q-110 76 -78 76 H78 Q110 76 110 90 V520 Q110 555 78 555 H-78 Q-110 555 -110 520 Z" fill="url(#cinGlass)"/>
+        <rect x="-90" y="120" width="20" height="380" rx="10" fill="#f9f4ed" opacity=".3"/>
+        <rect x="-80" y="240" width="160" height="220" fill="#f9f4ed"/>
+        <text text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="26" fill="#1a3a2d" letter-spacing="3" y="280">No. 01</text>
+        <line x1="-46" y1="294" x2="46" y2="294" stroke="#c8aa7a" stroke-width="0.8"/>
+        <text text-anchor="middle" font-family="Cormorant Garamond" font-size="16" fill="#1a3a2d" letter-spacing="4" y="328">RENEWAL</text>
+        <text text-anchor="middle" font-family="Cormorant Garamond" font-size="16" fill="#1a3a2d" letter-spacing="4" y="348">SERUM</text>
+        <line x1="-36" y1="370" x2="36" y2="370" stroke="#c8aa7a" stroke-width="0.4"/>
+        <text text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6c8f7b" letter-spacing="2.5" y="394">PHARMACIST FORMULATED</text>
+        <text text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6c8f7b" letter-spacing="2.5" y="410">HOUSTON · 30 ML</text>
+        <text text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#a78a5e" y="434">batch n° 027 / 200</text>
+      </g>
+      <!-- bottle shadow -->
+      <ellipse cx="1080" cy="820" rx="180" ry="14" fill="#000" opacity=".5"/>
+    </svg>
+  </div>
+
+  <div class="cin-hero__top">
+    <span class="cin-hero__loc">Houston · 29.76 N, 95.36 W</span>
+    <div class="cin-hero__index">
+      <span>Issue Vol. III · Cinematic</span>
+      <span><em>Live now</em> — N°027 drop in <em id="heroCountdown">14d</em></span>
+    </div>
+  </div>
+
+  <div class="cin-hero__copy">
+    <span class="cin-hero__eyebrow">The Concierge — A pharmacist for the women you love</span>
+    <h1 class="cin-hero__h r">
+      Skincare that<br/>
+      <em>answers when</em><br/>
+      <span class="outline">she</span> calls.
+    </h1>
+    <p class="cin-hero__deck r">Two pharmacists, twelve formulas, and a phone line that goes straight to the bench. Tell us about her skin — we'll do the rest, by the milligram.</p>
+    <div class="cin-hero__row">
+      <a href="#quiz" class="cin-hero__cta">
+        <span>Begin the consultation</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#welcome" class="cin-hero__play">
+        <span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+        Watch the lab film — 2:14
+      </a>
+    </div>
+  </div>
+
+  <div class="cin-hero__bottom">
+    <span>Scroll</span>
+    <span class="cin-hero__scroll-track"></span>
+  </div>
+</section>
+
+<!-- ─── 02 · Welcome Letter ─── -->
+<section class="welcome" id="welcome" data-screen-label="02 Welcome Letter">
+  <div class="welcome__inner">
+    <div class="welcome__visual r">
+      <div class="welcome__portrait">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="wp" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#dec39a"/>
+              <stop offset="1" stop-color="#8a6f48"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#wp)"/>
+          <!-- abstract figure -->
+          <circle cx="200" cy="180" r="80" fill="#0a1812" opacity=".7"/>
+          <path d="M70 500 Q70 320 200 320 Q330 320 330 500 Z" fill="#0a1812" opacity=".7"/>
+          <!-- pharmacist coat collar -->
+          <path d="M150 360 L200 380 L250 360 L260 500 L140 500 Z" fill="#f9f4ed" opacity=".4"/>
+          <!-- name plate -->
+          <rect x="20" y="450" width="120" height="30" fill="#0a1812" opacity=".8"/>
+          <text x="80" y="470" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#c8aa7a" letter-spacing="2">DR. A — PHARMACIST</text>
+        </svg>
+      </div>
+      <p class="welcome__caption">— Dr. A, photographed in the compounding lab. Houston, 04.02.26</p>
+    </div>
+
+    <article class="welcome__copy">
+      <span class="welcome__eyebrow">A letter from the bench</span>
+      <h2 class="welcome__h r">
+        Before you<br/>
+        choose anything,<br/>
+        <em>let us choose for her.</em>
+      </h2>
+      <div class="welcome__letter r">
+        <p>If you are here, it is almost always for somebody else. A wife whose retinol burned. A mother whose vitamin C oxidised. A daughter, eighteen, who is just beginning. We have stood at our bench for many of them, and we will gladly stand here for yours.</p>
+        <p>Below, three short questions. Or, if you prefer, the phone line at the top of this page — it rings on the bench, not at a call centre.</p>
+      </div>
+      <div class="welcome__sig">
+        <span class="welcome__sig-name">— Dr. A &amp; Dr. M</span>
+        <span class="welcome__sig-role">Founding pharmacists · est. 2026</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ─── 03 · Skin Quiz ─── -->
+<section class="quiz" id="quiz" data-screen-label="03 Skin Quiz">
+  <div class="quiz__head">
+    <span class="quiz__eyebrow">— The Consultation —</span>
+    <h2 class="quiz__h">Three short <em>questions.</em></h2>
+    <p class="quiz__intro">A pharmacist's triage, condensed. Pick the answer that sounds most like her. We'll match the rest.</p>
+  </div>
+
+  <!-- Step 1 -->
+  <div class="quiz__step">
+    <div class="quiz__step-label">
+      <span>Step 01 / 03</span>
+      <strong>Her skin, on most mornings, feels —</strong>
+      <em>— optional —</em>
+    </div>
+    <div class="quiz__options" data-step="1">
+      <button class="quiz__opt" data-value="dry">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v6M5 12a7 7 0 1 0 14 0M8 12h8"/></svg>
+        </span>
+        <span class="quiz__opt-name">Quietly thirsty</span>
+        <span class="quiz__opt-desc">Tight by the cheekbones, fine lines around dawn.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="oily">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v8M8 14a4 4 0 1 0 8 0c0-2-4-12-4-12s-4 10-4 12z"/></svg>
+        </span>
+        <span class="quiz__opt-name">Glowing by noon</span>
+        <span class="quiz__opt-desc">A high shine on the T-zone, visible pores.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="sensitive">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M8 16q4-3 8 0"/></svg>
+        </span>
+        <span class="quiz__opt-name">Reactive</span>
+        <span class="quiz__opt-desc">Easily flushed. Dislikes change, fragrance, weather.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="combination">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v20M2 12h20"/></svg>
+        </span>
+        <span class="quiz__opt-name">Both at once</span>
+        <span class="quiz__opt-desc">Shine in the middle, tight at the edges.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="quiz__step">
+    <div class="quiz__step-label">
+      <span>Step 02 / 03</span>
+      <strong>What she would change first, if she could —</strong>
+      <em></em>
+    </div>
+    <div class="quiz__options" data-step="2">
+      <button class="quiz__opt" data-value="lines">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8h18M3 14h12M3 19h8"/></svg>
+        </span>
+        <span class="quiz__opt-name">Fine lines</span>
+        <span class="quiz__opt-desc">Around the eyes, the corners of the mouth.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="tone">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>
+        </span>
+        <span class="quiz__opt-name">Uneven tone</span>
+        <span class="quiz__opt-desc">Patches, dullness, sun memory.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="texture">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6c4 2 6 2 9 0M3 12c4 2 6 2 9 0M3 18c4 2 6 2 9 0M21 6c-1 1-2 1-3 0M21 12c-1 1-2 1-3 0M21 18c-1 1-2 1-3 0"/></svg>
+        </span>
+        <span class="quiz__opt-name">Texture</span>
+        <span class="quiz__opt-desc">Pores, bumps under the makeup.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="all">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l2.5 7H22l-6 4.5L18.5 22 12 17.5 5.5 22 8 14.5 2 10h7.5z"/></svg>
+        </span>
+        <span class="quiz__opt-name">All of them</span>
+        <span class="quiz__opt-desc">A full ritual, in order.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="quiz__step">
+    <div class="quiz__step-label">
+      <span>Step 03 / 03</span>
+      <strong>How she'd like to use it —</strong>
+      <em></em>
+    </div>
+    <div class="quiz__options" data-step="3">
+      <button class="quiz__opt" data-value="minutes">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </span>
+        <span class="quiz__opt-name">Two minutes flat</span>
+        <span class="quiz__opt-desc">One serum, one cream. That's the whole ritual.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="ritual">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12l3 3 8-8M9 5l7 7-3 3"/></svg>
+        </span>
+        <span class="quiz__opt-name">A full ritual</span>
+        <span class="quiz__opt-desc">Four steps, twelve minutes, a small ceremony.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="gentle">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg>
+        </span>
+        <span class="quiz__opt-name">Gently, please</span>
+        <span class="quiz__opt-desc">Botanical-led, low actives, no retinoid yet.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+      <button class="quiz__opt" data-value="prescriptive">
+        <span class="quiz__opt-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 11V5a3 3 0 1 1 6 0v6M5 11h14v9H5z"/></svg>
+        </span>
+        <span class="quiz__opt-name">Prescribed</span>
+        <span class="quiz__opt-desc">Tell me exactly what, exactly when, exactly how much.</span>
+        <span class="quiz__opt-check">✓</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="quiz__result" id="quizResult">
+    <div>
+      <p class="quiz__result-eyebrow">— Your pharmacist's recommendation —</p>
+      <h3>The <em>Renewal Ritual</em>, with Velvet Cream as the seal.</h3>
+      <p id="quizSummary">Pick three answers above and we'll build her ritual in real-time. (Default: Renewal Serum N°01 + Velvet Cream N°04 + Vitamin C N°02.)</p>
+    </div>
+    <a href="#builder" class="quiz__result-cta">Build her ritual →</a>
+  </div>
+</section>
+
+<!-- ─── 04 · Before / After Slider ─── -->
+<section class="compare" id="compare" data-screen-label="04 Before / After">
+  <div class="compare__head">
+    <h2 class="compare__title r">Eight weeks, <em>side by side.</em></h2>
+    <p class="compare__deck r">Drag the handle. The left frame is night zero. The right frame is night fifty-six. The protocol — Renewal Serum N°01 nightly, Velvet Cream every evening.</p>
+  </div>
+
+  <div class="compare__frame" id="compareFrame" style="--pos: 50%; --clip: 50%;">
+    <!-- After layer -->
+    <div class="compare__layer compare__layer--after">
+      <svg viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="afterBg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f1e4c8"/>
+            <stop offset="1" stop-color="#dec39a"/>
+          </linearGradient>
+          <radialGradient id="afterFace" cx="0.5" cy="0.4" r="0.5">
+            <stop offset="0" stop-color="#fefaf4"/>
+            <stop offset="1" stop-color="#dec39a"/>
+          </radialGradient>
+        </defs>
+        <rect width="1200" height="675" fill="url(#afterBg)"/>
+        <!-- face -->
+        <ellipse cx="600" cy="320" rx="240" ry="280" fill="url(#afterFace)"/>
+        <!-- soft glow highlights -->
+        <ellipse cx="500" cy="260" rx="60" ry="40" fill="#fff" opacity=".4"/>
+        <ellipse cx="700" cy="270" rx="50" ry="35" fill="#fff" opacity=".35"/>
+        <ellipse cx="600" cy="420" rx="80" ry="40" fill="#fff" opacity=".25"/>
+        <!-- minimal features -->
+        <ellipse cx="540" cy="310" rx="14" ry="6" fill="#1a3a2d" opacity=".6"/>
+        <ellipse cx="660" cy="310" rx="14" ry="6" fill="#1a3a2d" opacity=".6"/>
+        <path d="M570 410 Q600 420 630 410" stroke="#a78a5e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <!-- Before layer (clipped) -->
+    <div class="compare__layer compare__layer--before">
+      <svg viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="beforeBg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8a8478"/>
+            <stop offset="1" stop-color="#6a6458"/>
+          </linearGradient>
+          <radialGradient id="beforeFace" cx="0.5" cy="0.4" r="0.5">
+            <stop offset="0" stop-color="#bcb0a0"/>
+            <stop offset="1" stop-color="#7e7468"/>
+          </radialGradient>
+        </defs>
+        <rect width="1200" height="675" fill="url(#beforeBg)"/>
+        <ellipse cx="600" cy="320" rx="240" ry="280" fill="url(#beforeFace)"/>
+        <!-- texture lines -->
+        <g stroke="#5a5044" stroke-width="0.6" fill="none" opacity=".5">
+          <path d="M440 280 Q480 285 520 282"/>
+          <path d="M440 295 Q480 300 525 298"/>
+          <path d="M680 282 Q720 285 760 281"/>
+          <path d="M680 297 Q720 300 762 297"/>
+          <path d="M460 460 Q520 470 580 462"/>
+          <path d="M620 462 Q680 470 740 462"/>
+          <path d="M480 200 Q540 210 600 205"/>
+          <path d="M600 205 Q660 210 720 200"/>
+        </g>
+        <ellipse cx="540" cy="310" rx="14" ry="5" fill="#1a3a2d" opacity=".5"/>
+        <ellipse cx="660" cy="310" rx="14" ry="5" fill="#1a3a2d" opacity=".5"/>
+        <path d="M570 410 Q600 420 630 410" stroke="#3a2818" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- redness patches -->
+        <ellipse cx="480" cy="380" rx="40" ry="22" fill="#9a4a3a" opacity=".25"/>
+        <ellipse cx="720" cy="385" rx="35" ry="20" fill="#9a4a3a" opacity=".22"/>
+      </svg>
+    </div>
+
+    <div class="compare__label compare__label--before">— Night Zero</div>
+    <div class="compare__label compare__label--after">Night 56 — </div>
+
+    <div class="compare__divider"></div>
+    <div class="compare__handle" style="left: var(--pos, 50%);">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M8 6l-4 6 4 6M16 6l4 6-4 6"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="compare__caption">
+    <span>— Eleanor R., age 38 · Houston, TX</span>
+    <span><em>Protocol</em> — Renewal Serum N°01 · Velvet Cream N°04 · 56 nights</span>
+  </div>
+</section>
+
+<!-- ─── 05 · Ritual Builder ─── -->
+<section class="builder" id="builder" data-screen-label="05 Build a Ritual">
+  <div class="builder__head">
+    <span class="builder__eyebrow">— Build a ritual —</span>
+    <h2 class="builder__title r">Pick three. <em>Save fifteen percent.</em></h2>
+    <p class="builder__deck r">Choose one from each column — cleanse, treat, seal. We package the three together, with a printed protocol card from your pharmacist.</p>
+  </div>
+
+  <div class="builder__board" id="builderBoard">
+    <!-- Slot 1 — Cleanse -->
+    <div class="builder__slot" data-slot="cleanse">
+      <div class="builder__slot-label"><span>Slot 01</span><strong>Cleanse</strong></div>
+      <div class="builder__picker">
+        <button class="builder__pick is-selected" data-price="64">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#ebe3d2"/><rect x="22" y="10" width="16" height="40" rx="2" fill="#1a3a2d"/><rect x="26" y="25" width="8" height="14" fill="#f9f4ed"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Velvet Milk</h4>
+            <p>No. 00 · 200ml</p>
+          </span>
+          <span class="builder__pick-price">$64</span>
+        </button>
+        <button class="builder__pick" data-price="58">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#e6ede8"/><rect x="22" y="10" width="16" height="40" rx="2" fill="#1a3a2d"/><rect x="26" y="25" width="8" height="14" fill="#f9f4ed"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Botanical Foam</h4>
+            <p>No. 00b · 150ml</p>
+          </span>
+          <span class="builder__pick-price">$58</span>
+        </button>
+        <button class="builder__pick" data-price="72">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#f1e4c8"/><rect x="20" y="14" width="20" height="34" rx="3" fill="#1a3a2d"/><rect x="24" y="28" width="12" height="12" fill="#f9f4ed"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Clay Balm</h4>
+            <p>No. 00c · 100ml</p>
+          </span>
+          <span class="builder__pick-price">$72</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Slot 2 — Treat -->
+    <div class="builder__slot" data-slot="treat">
+      <div class="builder__slot-label"><span>Slot 02</span><strong>Treat</strong></div>
+      <div class="builder__picker">
+        <button class="builder__pick is-selected" data-price="148">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#dec39a"/><rect x="22" y="6" width="16" height="48" rx="2" fill="#0e2118"/><rect x="25" y="24" width="10" height="18" fill="#f9f4ed"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Renewal Serum</h4>
+            <p>No. 01 · 30ml</p>
+          </span>
+          <span class="builder__pick-price">$148</span>
+        </button>
+        <button class="builder__pick" data-price="132">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#1a3a2d"/><rect x="22" y="6" width="16" height="48" rx="2" fill="#6c8f7b"/><rect x="25" y="24" width="10" height="18" fill="#f9f4ed"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Vitamin C Elixir</h4>
+            <p>No. 02 · 30ml</p>
+          </span>
+          <span class="builder__pick-price">$132</span>
+        </button>
+        <button class="builder__pick" data-price="96">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#f1e4c8"/><rect x="22" y="6" width="16" height="48" rx="2" fill="#c8aa7a"/><rect x="25" y="24" width="10" height="18" fill="#f9f4ed"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Golden Oil</h4>
+            <p>No. 03 · 30ml</p>
+          </span>
+          <span class="builder__pick-price">$96</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Slot 3 — Seal -->
+    <div class="builder__slot" data-slot="seal">
+      <div class="builder__slot-label"><span>Slot 03</span><strong>Seal</strong></div>
+      <div class="builder__picker">
+        <button class="builder__pick is-selected" data-price="118">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#f3ecdf"/><rect x="14" y="18" width="32" height="30" fill="#fefaf4"/><ellipse cx="30" cy="18" rx="16" ry="3" fill="#1a3a2d"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Velvet Cream</h4>
+            <p>No. 04 · 50ml</p>
+          </span>
+          <span class="builder__pick-price">$118</span>
+        </button>
+        <button class="builder__pick" data-price="84">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#dec39a"/><rect x="14" y="18" width="32" height="30" fill="#f9f4ed"/><ellipse cx="30" cy="18" rx="16" ry="3" fill="#1a3a2d"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Calendula Balm</h4>
+            <p>No. 04b · 30ml</p>
+          </span>
+          <span class="builder__pick-price">$84</span>
+        </button>
+        <button class="builder__pick" data-price="92">
+          <span class="builder__pick-thumb">
+            <svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#6c8f7b"/><rect x="22" y="10" width="16" height="40" rx="8" fill="#3d6b54"/><rect x="26" y="28" width="8" height="12" fill="#f9f4ed"/></svg>
+          </span>
+          <span class="builder__pick-info">
+            <h4>Eye Concentrate</h4>
+            <p>No. 06 · 15ml</p>
+          </span>
+          <span class="builder__pick-price">$92</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="builder__totals">
+    <div class="builder__totals-label">
+      <span>Your ritual</span>
+      <strong id="builderNames">Velvet Milk · Renewal Serum · Velvet Cream</strong>
+    </div>
+    <div class="builder__totals-savings">
+      Saved <strong id="builderSavings">$50</strong>
+    </div>
+    <div>
+      <div class="builder__totals-price">
+        <del id="builderFull">$330</del>
+        <span id="builderPrice">$280</span>
+      </div>
+      <a href="#book" class="builder__totals-cta">Add the ritual →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 06 · Limited Drop Countdown ─── -->
+<section class="drop" id="drop" data-screen-label="06 Limited Drop">
+  <div class="drop__inner">
+    <div class="drop__copy r">
+      <span class="drop__eyebrow">Live · Limited drop</span>
+      <h2 class="drop__h">Batch N°027.<br/>Two hundred bottles.<br/><em>Then never again.</em></h2>
+      <p class="drop__lede">A single edition of the Renewal Serum, compounded under the spring west light. Once the batch is poured, the formula is retired until the next pharmacist's letter.</p>
+      <ul class="drop__specs">
+        <li><span>Bottles in batch</span><strong>200</strong></li>
+        <li><span>Reserved by members</span><strong>146</strong></li>
+        <li><span>Available to public</span><strong>54</strong></li>
+        <li><span>Pours per bottle</span><strong>~ 60</strong></li>
+      </ul>
+      <a href="#" class="drop__cta">Reserve a bottle →</a>
+    </div>
+
+    <div class="drop__clock">
+      <p class="drop__clock-label">— Public drop in —</p>
+      <div class="drop__clock-grid" id="dropClock">
+        <div class="drop__time"><span class="drop__time-n" data-unit="days">14</span><span class="drop__time-u">Days</span></div>
+        <div class="drop__time"><span class="drop__time-n" data-unit="hours">08</span><span class="drop__time-u">Hours</span></div>
+        <div class="drop__time"><span class="drop__time-n" data-unit="minutes">22</span><span class="drop__time-u">Mins</span></div>
+        <div class="drop__time"><span class="drop__time-n" data-unit="seconds">41</span><span class="drop__time-u">Secs</span></div>
+      </div>
+      <div class="drop__bottle">
+        <svg viewBox="0 0 120 220">
+          <defs>
+            <linearGradient id="dropG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d6b54"/><stop offset="1" stop-color="#0e2118"/></linearGradient>
+          </defs>
+          <rect x="48" y="6" width="24" height="28" rx="2" fill="#c8aa7a"/>
+          <rect x="36" y="34" width="48" height="180" rx="6" fill="url(#dropG)"/>
+          <rect x="44" y="100" width="32" height="44" fill="#f9f4ed"/>
+          <text x="60" y="120" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#1a3a2d">No. 01</text>
+          <line x1="50" y1="126" x2="70" y2="126" stroke="#c8aa7a" stroke-width="0.4"/>
+          <text x="60" y="138" text-anchor="middle" font-family="JetBrains Mono" font-size="5" fill="#1a3a2d" letter-spacing="1">N° 027 / 200</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 07 · Book a Consult ─── -->
+<section class="book" id="book" data-screen-label="07 Book a Consult">
+  <div class="book__inner">
+    <div class="book__copy">
+      <span class="book__eyebrow">— One-to-one —</span>
+      <h2 class="book__h r">Forty <em>minutes</em><br/>with the bench.</h2>
+      <p class="book__lede">A video consultation with Dr. A or Dr. M. Your skin, on a real pharmacist's clock — not a chatbot, not a coach, not a sales call.</p>
+      <div class="book__info">
+        <div>
+          <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="7"/><path d="M9 4v5l3 2"/></svg>
+          <span>40-minute video session. Complimentary for first-time orders over $200.</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="12" height="11" rx="1"/><path d="M3 7h12M6 2v4M12 2v4"/></svg>
+          <span>Schedule directly on Dr. A or Dr. M's bench calendar.</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l6 4 6-4M3 5h12v8H3z"/></svg>
+          <span>Printed protocol mailed to your address within 72 hours.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="book__cal">
+      <div class="book__cal-head">
+        <div class="book__cal-month"><em>May</em> <span>· 2026</span></div>
+        <div class="book__cal-nav">
+          <button>‹</button>
+          <button>›</button>
+        </div>
+      </div>
+      <div class="book__cal-grid">
+        <span class="dow">Mo</span><span class="dow">Tu</span><span class="dow">We</span><span class="dow">Th</span><span class="dow">Fr</span><span class="dow">Sa</span><span class="dow">Su</span>
+        <button class="book__day is-other">28</button>
+        <button class="book__day is-other">29</button>
+        <button class="book__day is-other">30</button>
+        <button class="book__day is-disabled">1</button>
+        <button class="book__day is-disabled">2</button>
+        <button class="book__day is-disabled">3</button>
+        <button class="book__day is-disabled">4</button>
+        <button class="book__day is-disabled">5</button>
+        <button class="book__day is-disabled">6</button>
+        <button class="book__day is-disabled">7</button>
+        <button class="book__day is-disabled">8</button>
+        <button class="book__day is-disabled">9</button>
+        <button class="book__day is-disabled">10</button>
+        <button class="book__day is-disabled">11</button>
+        <button class="book__day is-disabled">12</button>
+        <button class="book__day is-disabled">13</button>
+        <button class="book__day is-disabled">14</button>
+        <button class="book__day is-disabled">15</button>
+        <button class="book__day is-disabled">16</button>
+        <button class="book__day is-disabled">17</button>
+        <button class="book__day is-disabled">18</button>
+        <button class="book__day is-disabled">19</button>
+        <button class="book__day is-disabled">20</button>
+        <button class="book__day is-disabled">21</button>
+        <button class="book__day is-disabled">22</button>
+        <button class="book__day is-disabled">23</button>
+        <button class="book__day is-disabled">24</button>
+        <button class="book__day is-disabled">25</button>
+        <button class="book__day is-disabled">26</button>
+        <button class="book__day is-today">27</button>
+        <button class="book__day">28</button>
+        <button class="book__day">29</button>
+        <button class="book__day">30</button>
+        <button class="book__day is-selected">31</button>
+      </div>
+      <div class="book__slots">
+        <div class="book__slots-h">
+          <span>— Available — </span>
+          <strong>Saturday 31 May, with Dr. M</strong>
+        </div>
+        <div class="book__slots-row" id="bookSlots">
+          <button class="book__slot is-taken">9:00 am</button>
+          <button class="book__slot is-taken">9:40 am</button>
+          <button class="book__slot">10:20 am</button>
+          <button class="book__slot is-selected">11:00 am</button>
+          <button class="book__slot is-taken">11:40 am</button>
+          <button class="book__slot">1:00 pm</button>
+          <button class="book__slot">1:40 pm</button>
+          <button class="book__slot">2:20 pm</button>
+          <button class="book__slot">3:00 pm</button>
+          <button class="book__slot is-taken">3:40 pm</button>
+          <button class="book__slot">4:20 pm</button>
+          <button class="book__slot">5:00 pm</button>
+        </div>
+      </div>
+      <div class="book__confirm">
+        <div class="book__confirm-meta">
+          You — with <strong>Dr. M</strong>, Sat 31 May at <strong>11:00 am CT</strong>.
+        </div>
+        <button class="book__confirm-cta">Confirm consult →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 08 · Member Tiers ─── -->
+<section class="tiers" id="tiers" data-screen-label="08 Member Tiers">
+  <div class="tiers__head">
+    <span class="tiers__eyebrow">— The Maison —</span>
+    <h2 class="tiers__h">Three ways to <em>belong.</em></h2>
+    <p class="tiers__deck">Membership is invitation-led and quietly tiered. Begin where the ritual finds you — we will move you up when you ask.</p>
+  </div>
+
+  <div class="tiers__grid">
+    <article class="tier r">
+      <span class="tier__name">— Initiate —</span>
+      <h3 class="tier__h">The First<br/>Letter.</h3>
+      <div class="tier__price">
+        <span class="tier__price-n">Free</span>
+        <span class="tier__price-per">no commitment</span>
+      </div>
+      <ul class="tier__perks">
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Quarterly letter from the bench.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Sample of one active per quarter.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Standing reading list on the journal.</li>
+        <li class="is-out"><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l8 8M13 5l-8 8"/></svg>Reserved batches.</li>
+        <li class="is-out"><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l8 8M13 5l-8 8"/></svg>One-to-one pharmacist line.</li>
+      </ul>
+      <a href="#" class="tier__cta">Subscribe to the letter</a>
+    </article>
+
+    <article class="tier tier--featured r">
+      <span class="tier__name">— Devotee —</span>
+      <h3 class="tier__h">The Standing<br/>Order.</h3>
+      <div class="tier__price">
+        <span class="tier__price-n">$148</span>
+        <span class="tier__price-per">/ quarter</span>
+      </div>
+      <ul class="tier__perks">
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Pharmacist-curated quarterly bottle.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>First call on every numbered batch.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Printed protocol with every shipment.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Pharmacist email reply within 24h.</li>
+        <li class="is-out"><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l8 8M13 5l-8 8"/></svg>Compounding-lab visit.</li>
+      </ul>
+      <a href="#" class="tier__cta">Begin the standing order</a>
+    </article>
+
+    <article class="tier r">
+      <span class="tier__name">— Maison —</span>
+      <h3 class="tier__h">The Private<br/>Bench.</h3>
+      <div class="tier__price">
+        <span class="tier__price-n">By invitation</span>
+      </div>
+      <ul class="tier__perks">
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>One bespoke formula per year.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Direct line to Dr. A and Dr. M.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Open invitation to the Houston lab.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Annual bench retreat.</li>
+        <li><svg viewBox="0 0 18 18" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l4 4 8-8"/></svg>Plus everything in Devotee.</li>
+      </ul>
+      <a href="#" class="tier__cta">Request an invitation</a>
+    </article>
+  </div>
+</section>
+
+<!-- ─── 09 · Concierge Contact ─── -->
+<section class="contact" data-screen-label="09 Concierge">
+  <div class="contact__inner">
+    <div class="contact__copy">
+      <span class="welcome__eyebrow" style="display:block;">— The direct line —</span>
+      <h2>The bench, <em>any way you'd prefer.</em></h2>
+      <p>We answer the phone. We reply to email. Dr. A and Dr. M each take ten patients a day — and one of those, today, could be you.</p>
+      <ul class="contact__lines">
+        <li><span>Phone</span><a href="tel:+17135550142">(713) 555-0142</a></li>
+        <li><span>Email</span><a href="mailto:pharmacist@chemistrie.co">pharmacist@chemistrie.co</a></li>
+        <li><span>Studio</span><a href="#">1402 Heights Blvd, Houston TX 77008</a></li>
+        <li><span>Hours</span><a href="#">Mon–Sat · 9am–6pm Central</a></li>
+      </ul>
+    </div>
+
+    <div class="contact__sig">
+      <div class="contact__sig-portrait">
+        <svg viewBox="0 0 240 240" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="csig" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#dec39a"/>
+              <stop offset="1" stop-color="#8a6f48"/>
+            </linearGradient>
+          </defs>
+          <rect width="240" height="240" fill="url(#csig)"/>
+          <circle cx="120" cy="100" r="46" fill="#0a1812" opacity=".7"/>
+          <path d="M48 240 Q48 150 120 150 Q192 150 192 240 Z" fill="#0a1812" opacity=".7"/>
+          <path d="M90 180 L120 192 L150 180 L155 240 H85 Z" fill="#f9f4ed" opacity=".5"/>
+        </svg>
+      </div>
+      <p class="contact__sig-name">— Dr. M</p>
+      <p class="contact__sig-role">Compounding pharmacist · co-founder</p>
+    </div>
+  </div>
+
+  <div class="contact__strip">
+    <span>© Chemistrie LLC · <em>2026</em> · Compounded with care in Houston</span>
+    <span>Volume <em>III</em> · The Concierge Issue</span>
+    <span>Crafted by Dr. A &amp; Dr. M</span>
+  </div>
+</section>
+
+</main>
+
+<script src="chemistrie-v3.js"></script>
+</body>
+</html>

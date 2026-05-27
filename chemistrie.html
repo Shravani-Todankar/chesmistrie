@@ -1,0 +1,1518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CHEMISTRIE — Made by pharmacists. Made for the women they love.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="chemistrie.css" />
+
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<!-- ───── Top utility strip ───── -->
+<div class="utility-strip">
+  <span>Complimentary shipping on orders over $120 · Pharmacist-formulated in Houston, TX</span>
+</div>
+
+<!-- ───── Nav ───── -->
+<header class="nav" id="nav">
+  <a href="#" class="nav__logo" aria-label="Chemistrie home">
+    <span class="nav__wordmark">CHEMISTRIE</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#shop">Shop</a>
+    <a href="#story">The Story</a>
+    <a href="#actives">Actives</a>
+    <a href="#ritual">The Ritual</a>
+    <a href="#founders">Pharmacists</a>
+  </nav>
+  <div class="nav__actions">
+    <button class="nav__icon" aria-label="Search">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    </button>
+    <button class="nav__icon" aria-label="Account">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+    </button>
+    <a href="#bag" class="nav__bag">
+      <span>Bag</span>
+      <span class="nav__bag-count">2</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- ───── Hero — Modern split ───── -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="hero__bg">
+    <div class="hero__blob hero__blob--sage"></div>
+    <div class="hero__blob hero__blob--tan"></div>
+    <div class="hero__noise"></div>
+    <div class="hero__grid-lines" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Top meta -->
+  <div class="hero__meta hero__meta--left">
+    <span class="hero__live"><span class="hero__live-dot"></span>A pharmacist is on the line</span>
+  </div>
+  <div class="hero__meta hero__meta--right">
+    <span>Houston · 29.76°N</span>
+    <span class="dot"></span>
+    <span>Vol. III · 2026</span>
+  </div>
+
+  <!-- Main split -->
+  <div class="hero__inner">
+    <!-- Left: copy -->
+    <div class="hero__copy">
+      <p class="hero__eyebrow">
+        <span class="hero__eyebrow-line"></span>
+        <span>A Pharmacist's Quiet Luxury</span>
+      </p>
+
+      <h1 class="hero__title" aria-label="Made by pharmacists. Made for the women they love.">
+        <span class="hero__title-row">
+          <span class="hero__title-word">Made</span>
+          <em class="hero__title-em">by pharmacists.</em>
+        </span>
+        <span class="hero__title-row">
+          <span class="hero__title-word">Made <em class="hero__title-em">for</em> the women</span>
+        </span>
+        <span class="hero__title-row">
+          <em class="hero__title-em hero__title-em--accent">they love.</em>
+        </span>
+      </h1>
+
+      <p class="hero__deck">
+        Compounded by hand in Houston. Twelve formulas, two hundred bottles a batch, retired the moment the batch is poured. Welcome to the bench.
+      </p>
+
+      <div class="hero__cta-row">
+        <a class="hero__cta-primary" href="#shop">
+          <span>Begin the consultation</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="hero__cta-secondary" href="#instagram">
+          <span class="hero__cta-icon">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          <span>Watch the bench film · 2:14</span>
+        </a>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="hero__trust">
+        <div class="hero__trust-item">
+          <span class="hero__trust-num">2,400+</span>
+          <span class="hero__trust-label">Women on the list</span>
+        </div>
+        <div class="hero__trust-divider"></div>
+        <div class="hero__trust-item">
+          <span class="hero__trust-num">28</span>
+          <span class="hero__trust-label">Clinical-grade actives</span>
+        </div>
+        <div class="hero__trust-divider"></div>
+        <div class="hero__trust-item">
+          <span class="hero__trust-num">★ 4.96</span>
+          <span class="hero__trust-label">Verified buyer rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: visual stage -->
+    <div class="hero__stage">
+      <!-- Floating spec card -->
+      <div class="hero__spec-card hero__spec-card--top">
+        <span class="hero__spec-label">Tonight's batch</span>
+        <span class="hero__spec-value">N°027</span>
+        <span class="hero__spec-meta">of 200 · poured at 4:42pm CT</span>
+      </div>
+
+      <!-- Center bottle -->
+      <div class="hero__bottle-wrap">
+        <div class="hero__bottle-glow"></div>
+        <svg class="hero__bottle" viewBox="0 0 280 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <linearGradient id="herob-glass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3d6b54"/>
+              <stop offset=".5" stop-color="#1a3a2d"/>
+              <stop offset="1" stop-color="#0e2118"/>
+            </linearGradient>
+            <linearGradient id="herob-cap" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#dec39a"/>
+              <stop offset="1" stop-color="#a78a5e"/>
+            </linearGradient>
+            <linearGradient id="herob-hl" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff" stop-opacity=".42"/>
+              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- cap -->
+          <rect x="108" y="20" width="64" height="56" rx="5" fill="url(#herob-cap)"/>
+          <rect x="104" y="76" width="72" height="10" rx="2" fill="#a78a5e"/>
+          <!-- neck -->
+          <rect x="118" y="86" width="44" height="22" fill="url(#herob-glass)"/>
+          <!-- body -->
+          <path d="M62 116 Q62 104 92 104 H188 Q218 104 218 116 V438 Q218 462 192 462 H88 Q62 462 62 438 Z" fill="url(#herob-glass)"/>
+          <!-- highlight -->
+          <rect x="80" y="148" width="14" height="270" rx="7" fill="url(#herob-hl)"/>
+          <!-- label -->
+          <rect x="84" y="232" width="112" height="166" fill="#f9f4ed"/>
+          <text x="140" y="262" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="17" fill="#1a3a2d" letter-spacing="2.5">No. 01</text>
+          <line x1="100" y1="272" x2="180" y2="272" stroke="#c8aa7a" stroke-width="0.7"/>
+          <text x="140" y="298" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="#1a3a2d" letter-spacing="3.5">RENEWAL</text>
+          <text x="140" y="314" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="#1a3a2d" letter-spacing="3.5">SERUM</text>
+          <line x1="108" y1="332" x2="172" y2="332" stroke="#c8aa7a" stroke-width="0.4"/>
+          <text x="140" y="350" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6" fill="#6c8f7b" letter-spacing="2">PHARMACIST FORMULATED</text>
+          <text x="140" y="362" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6" fill="#6c8f7b" letter-spacing="2">HOUSTON · 30 ML</text>
+          <text x="140" y="378" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="8" fill="#a78a5e">batch n° 027 / 200</text>
+        </svg>
+        <!-- bottle shadow -->
+        <div class="hero__bottle-shadow"></div>
+      </div>
+
+      <!-- Floating ingredient pills -->
+      <div class="hero__pills">
+        <span class="hero__pill hero__pill--1">Retinaldehyde 0.05%</span>
+        <span class="hero__pill hero__pill--2">Niacinamide 4%</span>
+        <span class="hero__pill hero__pill--3">Ferulic · Hyaluronic</span>
+      </div>
+
+      <!-- Tag bottom right -->
+      <div class="hero__spec-card hero__spec-card--bottom">
+        <span class="hero__spec-mini">Hand-numbered · pharmacist-signed</span>
+        <span class="hero__spec-rx">Rx</span>
+      </div>
+
+      <!-- Decorative numbers -->
+      <span class="hero__deco hero__deco--01">— 01</span>
+      <span class="hero__deco hero__deco--ed">N°II · ED</span>
+    </div>
+  </div>
+
+  <!-- Bottom strip -->
+  <div class="hero__strip">
+    <div class="hero__strip-marquee">
+      <span>Compounded in Houston</span><i>✦</i>
+      <span>Made for the women we love</span><i>✦</i>
+      <span>Hand-numbered batches</span><i>✦</i>
+      <span>Pharmaceutical-grade actives</span><i>✦</i>
+      <span>Compounded in Houston</span><i>✦</i>
+      <span>Made for the women we love</span><i>✦</i>
+      <span>Hand-numbered batches</span><i>✦</i>
+      <span>Pharmaceutical-grade actives</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="hero__scroll-cue">
+    <span>Scroll</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+<!-- ───── Vision ───── -->
+<section class="vision" id="story" data-screen-label="02 Vision">
+  <div class="section__head">
+    <span class="eyebrow">— The Vision —</span>
+  </div>
+
+  <blockquote class="vision__quote">
+    <p class="vision__words">
+      <em>"</em><span>Luxury</span> <span>skincare</span> <span>rooted</span> <span>in</span> <span>trust,</span> <span>warmth,</span> <span>and</span> <span>pharmacist</span> <span>expertise</span> <span>—</span> <span>built</span> <span>for</span> <span>the</span> <span>women</span> <span>we</span> <span>love.<em>"</em></span>
+    </p>
+    <footer class="vision__attribution">
+      <span class="vision__rule"></span>
+      <span>Dr. A &amp; Dr. M, Founding Pharmacists</span>
+    </footer>
+  </blockquote>
+
+  <div class="vision__grid">
+    <div class="vision__cell">
+      <div class="vision__cell-top">
+        <span class="vision__num">— 01</span>
+        <span class="vision__icon">
+          <svg viewBox="0 0 48 48" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M16 8h16M18 8v6c0 4-6 6-6 16 0 7 5 10 12 10s12-3 12-10c0-10-6-12-6-16V8"/>
+            <circle cx="24" cy="34" r="3" fill="currentColor"/>
+            <path d="M20 28h8" stroke-width="0.8"/>
+          </svg>
+        </span>
+      </div>
+      <h3>Compounded, never copied</h3>
+      <p>Every formula begins on a pharmacist's bench — not in a marketing room. Active concentrations are calibrated to skin physiology, then double-checked in lab.</p>
+      <span class="vision__tag">— Lab-verified, every batch</span>
+    </div>
+    <div class="vision__cell vision__cell--accent">
+      <div class="vision__cell-top">
+        <span class="vision__num">— 02</span>
+        <span class="vision__icon">
+          <svg viewBox="0 0 48 48" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="14" y="6" width="20" height="6" rx="1"/>
+            <path d="M16 12h16v30c0 2-2 4-4 4H20c-2 0-4-2-4-4z"/>
+            <circle cx="24" cy="28" r="5"/>
+            <path d="M21 28h6" stroke-width="0.8"/>
+          </svg>
+        </span>
+      </div>
+      <h3>Heirloom luxury</h3>
+      <p>Heavy glass. Hand-poured. Numbered batches. Objects you keep on the counter, not under the sink. The kind of bottle a daughter inherits.</p>
+      <span class="vision__tag">— Hand-numbered, 200 / batch</span>
+    </div>
+    <div class="vision__cell">
+      <div class="vision__cell-top">
+        <span class="vision__num">— 03</span>
+        <span class="vision__icon">
+          <svg viewBox="0 0 48 48" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M24 42s-12-7-12-18a7 7 0 0 1 12-5 7 7 0 0 1 12 5c0 11-12 18-12 18z"/>
+            <path d="M19 21c0-2 2-4 5-4M29 21c0-2-2-4-5-4" stroke-width="0.8"/>
+          </svg>
+        </span>
+      </div>
+      <h3>For the women we love</h3>
+      <p>Made first for wives, mothers, daughters and best friends — then offered to you. The standard never wavered because the audience never did.</p>
+      <span class="vision__tag">— Letters in every parcel</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Pillars — sticky stack ───── -->
+<section class="pillars" data-screen-label="03 Pillars">
+  <div class="pillars__intro">
+    <span class="eyebrow">— Brand Pillars —</span>
+    <h2 class="display-h">Three things we<br/><em>refuse</em> to compromise.</h2>
+  </div>
+
+  <div class="pillars__stack" id="pillarsStack">
+
+    <article class="pillar pillar--trust" data-pillar="01">
+      <div class="pillar__index">
+        <span class="pillar__num">01</span>
+        <span class="pillar__count">/ 03</span>
+      </div>
+      <div class="pillar__body">
+        <h3 class="pillar__title">Trust.</h3>
+        <p class="pillar__lede">Pharmacist credibility that feels warm, not clinical.</p>
+        <ul class="pillar__list">
+          <li>— Credentials are the proof. Love is the reason.</li>
+          <li>— Every active ingredient cleared by a licensed pharmacist.</li>
+          <li>— Transparency on dose, on source, on shelf-life.</li>
+        </ul>
+      </div>
+      <div class="pillar__visual">
+        <div class="pillar__crest">
+          <span class="pillar__mono">Rx</span>
+          <span class="pillar__crest-sub">Pharmacist seal · since 2026</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="pillar pillar--luxury" data-pillar="02">
+      <div class="pillar__index">
+        <span class="pillar__num">02</span>
+        <span class="pillar__count">/ 03</span>
+      </div>
+      <div class="pillar__body">
+        <h3 class="pillar__title">Luxury.</h3>
+        <p class="pillar__lede">Aspirational, never arrogant. Every touchpoint signals prestige.</p>
+        <ul class="pillar__list">
+          <li>— Heavy weighted glass. Hand-numbered batches.</li>
+          <li>— Vellum inserts, gold-foil ritual cards.</li>
+          <li>— A box you keep, not unbox.</li>
+        </ul>
+      </div>
+      <div class="pillar__visual">
+        <div class="pillar__crest pillar__crest--alt">
+          <span class="pillar__mono pillar__mono--serif">C.</span>
+          <span class="pillar__crest-sub">Maison Chemistrie · N° 001</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="pillar pillar--warmth" data-pillar="03">
+      <div class="pillar__index">
+        <span class="pillar__num">03</span>
+        <span class="pillar__count">/ 03</span>
+      </div>
+      <div class="pillar__body">
+        <h3 class="pillar__title">Warmth.</h3>
+        <p class="pillar__lede">Luxury with a heartbeat. The founder story makes Chemistrie unlike anything in the category.</p>
+        <ul class="pillar__list">
+          <li>— Two pharmacists. Husbands and fathers first.</li>
+          <li>— Formulas tested on the women they love.</li>
+          <li>— Personal letters in every order.</li>
+        </ul>
+      </div>
+      <div class="pillar__visual">
+        <div class="pillar__crest pillar__crest--warm">
+          <span class="pillar__mono pillar__mono--script">for her</span>
+          <span class="pillar__crest-sub">written by hand · in every box</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ───── Featured products ───── -->
+<section class="shop" id="shop" data-screen-label="04 Shop">
+  <div class="shop__head">
+    <span class="eyebrow">— The Collection —</span>
+    <h2 class="display-h">Six formulas.<br/><em>Zero shortcuts.</em></h2>
+    <p class="shop__lede">A complete pharmacist-built ritual. Begin with one, build to all six.</p>
+  </div>
+
+  <div class="shop__rail-wrap">
+    <div class="shop__rail">
+      <div class="shop__grid">
+    <!-- product cards generated by JS for variety, but kept declarative -->
+    <article class="product" data-color="forest">
+      <div class="product__media">
+        <span class="product__tag">No. 01 · Bestseller</span>
+        <svg class="product__bottle" viewBox="0 0 140 220" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a5a44"/><stop offset="1" stop-color="#1a3a2d"/></linearGradient>
+          </defs>
+          <rect x="56" y="6" width="28" height="26" rx="2" fill="#c8aa7a"/>
+          <rect x="40" y="32" width="60" height="180" rx="6" fill="url(#g1)"/>
+          <rect x="50" y="100" width="40" height="68" fill="#f9f4ed"/>
+          <text x="70" y="124" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#1a3a2d">No. 01</text>
+          <line x1="58" y1="130" x2="82" y2="130" stroke="#c8aa7a" stroke-width="0.5"/>
+          <text x="70" y="146" text-anchor="middle" font-family="Cormorant Garamond" font-size="8" letter-spacing="2" fill="#1a3a2d">RENEWAL</text>
+          <text x="70" y="158" text-anchor="middle" font-family="Cormorant Garamond" font-size="8" letter-spacing="2" fill="#1a3a2d">SERUM</text>
+        </svg>
+      </div>
+      <div class="product__meta">
+        <div>
+          <h3>Renewal Serum</h3>
+          <p>Retinaldehyde 0.05% · Niacinamide 4%</p>
+        </div>
+        <span class="product__price">$148</span>
+      </div>
+    </article>
+
+    <article class="product" data-color="sage">
+      <div class="product__media">
+        <span class="product__tag">No. 02</span>
+        <svg class="product__bottle" viewBox="0 0 140 220" aria-hidden="true">
+          <defs>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8aab98"/><stop offset="1" stop-color="#6c8f7b"/></linearGradient>
+          </defs>
+          <rect x="60" y="4" width="20" height="34" rx="2" fill="#1a3a2d"/>
+          <ellipse cx="70" cy="38" rx="14" ry="4" fill="#c8aa7a"/>
+          <path d="M44 50 Q44 42 60 42 H80 Q96 42 96 50 L102 210 Q102 214 96 214 H44 Q38 214 38 210 Z" fill="url(#g2)"/>
+          <rect x="48" y="110" width="44" height="64" fill="#f9f4ed"/>
+          <text x="70" y="132" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#1a3a2d">No. 02</text>
+          <line x1="58" y1="138" x2="82" y2="138" stroke="#c8aa7a" stroke-width="0.5"/>
+          <text x="70" y="154" text-anchor="middle" font-family="Cormorant Garamond" font-size="7" letter-spacing="1.5" fill="#1a3a2d">VITAMIN C</text>
+          <text x="70" y="164" text-anchor="middle" font-family="Cormorant Garamond" font-size="7" letter-spacing="1.5" fill="#1a3a2d">ELIXIR</text>
+        </svg>
+      </div>
+      <div class="product__meta">
+        <div>
+          <h3>Vitamin C Elixir</h3>
+          <p>L-Ascorbic 15% · Ferulic · Vitamin E</p>
+        </div>
+        <span class="product__price">$132</span>
+      </div>
+    </article>
+
+    <article class="product" data-color="tan">
+      <div class="product__media">
+        <span class="product__tag">No. 03</span>
+        <svg class="product__bottle" viewBox="0 0 140 220" aria-hidden="true">
+          <defs>
+            <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dec39a"/><stop offset="1" stop-color="#c8aa7a"/></linearGradient>
+          </defs>
+          <rect x="44" y="0" width="52" height="22" rx="3" fill="#1a3a2d"/>
+          <rect x="36" y="22" width="68" height="190" rx="4" fill="url(#g3)"/>
+          <rect x="46" y="110" width="48" height="68" fill="#f9f4ed"/>
+          <text x="70" y="132" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#1a3a2d">No. 03</text>
+          <line x1="56" y1="138" x2="84" y2="138" stroke="#1a3a2d" stroke-width="0.5"/>
+          <text x="70" y="154" text-anchor="middle" font-family="Cormorant Garamond" font-size="8" letter-spacing="2" fill="#1a3a2d">GOLDEN</text>
+          <text x="70" y="164" text-anchor="middle" font-family="Cormorant Garamond" font-size="8" letter-spacing="2" fill="#1a3a2d">OIL</text>
+        </svg>
+      </div>
+      <div class="product__meta">
+        <div>
+          <h3>Golden Oil</h3>
+          <p>Squalane · Bakuchiol · Calendula</p>
+        </div>
+        <span class="product__price">$96</span>
+      </div>
+    </article>
+
+    <article class="product" data-color="cream">
+      <div class="product__media">
+        <span class="product__tag">No. 04</span>
+        <svg class="product__bottle" viewBox="0 0 140 220" aria-hidden="true">
+          <defs>
+            <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fefaf3"/><stop offset="1" stop-color="#ece1cd"/></linearGradient>
+          </defs>
+          <ellipse cx="70" cy="20" rx="40" ry="6" fill="#1a3a2d"/>
+          <rect x="30" y="20" width="80" height="180" rx="4" fill="url(#g4)"/>
+          <ellipse cx="70" cy="200" rx="40" ry="6" fill="#1a3a2d" opacity=".15"/>
+          <rect x="44" y="100" width="52" height="72" fill="#1a3a2d" opacity=".06"/>
+          <text x="70" y="124" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#1a3a2d">No. 04</text>
+          <line x1="56" y1="130" x2="84" y2="130" stroke="#c8aa7a" stroke-width="0.5"/>
+          <text x="70" y="146" text-anchor="middle" font-family="Cormorant Garamond" font-size="8" letter-spacing="2" fill="#1a3a2d">VELVET</text>
+          <text x="70" y="156" text-anchor="middle" font-family="Cormorant Garamond" font-size="8" letter-spacing="2" fill="#1a3a2d">CREAM</text>
+        </svg>
+      </div>
+      <div class="product__meta">
+        <div>
+          <h3>Velvet Cream</h3>
+          <p>Ceramide complex · Peptide-5</p>
+        </div>
+        <span class="product__price">$118</span>
+      </div>
+    </article>
+
+    <article class="product" data-color="forest">
+      <div class="product__media">
+        <span class="product__tag">No. 05</span>
+        <svg class="product__bottle" viewBox="0 0 140 220" aria-hidden="true">
+          <defs>
+            <linearGradient id="g5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a5a44"/><stop offset="1" stop-color="#0e2118"/></linearGradient>
+          </defs>
+          <path d="M60 4 Q60 0 70 0 Q80 0 80 4 L82 24 H58 Z" fill="#c8aa7a"/>
+          <path d="M48 24 Q48 18 70 18 Q92 18 92 24 L96 50 L98 210 Q98 214 92 214 H48 Q42 214 42 210 L44 50 Z" fill="url(#g5)"/>
+          <rect x="50" y="110" width="40" height="64" fill="#f9f4ed"/>
+          <text x="70" y="132" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#1a3a2d">No. 05</text>
+          <line x1="58" y1="138" x2="82" y2="138" stroke="#c8aa7a" stroke-width="0.5"/>
+          <text x="70" y="154" text-anchor="middle" font-family="Cormorant Garamond" font-size="7" letter-spacing="1.5" fill="#1a3a2d">CLARIFYING</text>
+          <text x="70" y="164" text-anchor="middle" font-family="Cormorant Garamond" font-size="7" letter-spacing="1.5" fill="#1a3a2d">TONIC</text>
+        </svg>
+      </div>
+      <div class="product__meta">
+        <div>
+          <h3>Clarifying Tonic</h3>
+          <p>Mandelic 8% · Centella · Allantoin</p>
+        </div>
+        <span class="product__price">$84</span>
+      </div>
+    </article>
+
+    <article class="product" data-color="sage">
+      <div class="product__media">
+        <span class="product__tag">No. 06 · New</span>
+        <svg class="product__bottle" viewBox="0 0 140 220" aria-hidden="true">
+          <defs>
+            <linearGradient id="g6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8aab98"/><stop offset="1" stop-color="#56745f"/></linearGradient>
+          </defs>
+          <rect x="58" y="4" width="24" height="28" rx="2" fill="#c8aa7a"/>
+          <circle cx="70" cy="42" r="6" fill="#1a3a2d"/>
+          <rect x="38" y="48" width="64" height="166" rx="32" fill="url(#g6)"/>
+          <rect x="48" y="120" width="44" height="64" fill="#f9f4ed"/>
+          <text x="70" y="142" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#1a3a2d">No. 06</text>
+          <line x1="58" y1="148" x2="82" y2="148" stroke="#c8aa7a" stroke-width="0.5"/>
+          <text x="70" y="164" text-anchor="middle" font-family="Cormorant Garamond" font-size="8" letter-spacing="2" fill="#1a3a2d">EYE</text>
+          <text x="70" y="174" text-anchor="middle" font-family="Cormorant Garamond" font-size="8" letter-spacing="2" fill="#1a3a2d">CONCENTRATE</text>
+        </svg>
+      </div>
+      <div class="product__meta">
+        <div>
+          <h3>Eye Concentrate</h3>
+          <p>Caffeine · Peptide-3 · Cucumber</p>
+        </div>
+        <span class="product__price">$92</span>
+      </div>
+    </article>
+
+  </div>
+    </div>
+  </div>
+
+  <div class="shop__foot">
+    <a class="btn btn--ghost btn--dark" href="#all">
+      <span>Explore the full apothecary</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ───── Founder story ───── -->
+<section class="founders" id="founders" data-screen-label="05 Founders">
+  <div class="founders__media">
+    <div class="founders__photo founders__photo--a">
+      <svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="px1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a3a2d"/><stop offset="1" stop-color="#6c8f7b"/></linearGradient>
+        </defs>
+        <rect width="400" height="520" fill="url(#px1)"/>
+        <!-- abstract portrait silhouette -->
+        <circle cx="200" cy="200" r="80" fill="#f9f4ed" opacity=".18"/>
+        <path d="M80 520 Q80 360 200 360 Q320 360 320 520 Z" fill="#f9f4ed" opacity=".18"/>
+        <text x="20" y="500" font-family="Cormorant Garamond" font-style="italic" font-size="24" fill="#f9f4ed" opacity=".75">Dr. A —</text>
+      </svg>
+    </div>
+    <div class="founders__photo founders__photo--b">
+      <svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="px2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8aa7a"/><stop offset="1" stop-color="#8a6f48"/></linearGradient>
+        </defs>
+        <rect width="400" height="520" fill="url(#px2)"/>
+        <circle cx="200" cy="200" r="80" fill="#1a3a2d" opacity=".22"/>
+        <path d="M80 520 Q80 360 200 360 Q320 360 320 520 Z" fill="#1a3a2d" opacity=".22"/>
+        <text x="20" y="500" font-family="Cormorant Garamond" font-style="italic" font-size="24" fill="#1a3a2d" opacity=".8">Dr. M —</text>
+      </svg>
+    </div>
+    <div class="founders__caption">
+      <span class="founders__caption-mark">✦</span>
+      <span>The founding pharmacists, photographed in the compounding lab — Houston, 2026.</span>
+    </div>
+  </div>
+
+  <div class="founders__copy">
+    <span class="eyebrow">— The Pharmacists —</span>
+    <h2 class="display-h">Two compounding<br/>pharmacists.<br/><em>One promise.</em></h2>
+    <p class="founders__lede">
+      They met behind the same bench in Houston, weighing actives by the milligram for women who had been failed by everything on the shelf.
+    </p>
+    <p>
+      Wives wanted retinol that didn't burn. Mothers wanted vitamin C that didn't oxidise in a week. Best friends wanted a moisturiser they could hand down. So they started making it — quietly, by hand, in concentrations the industry deemed too expensive to mass-produce.
+    </p>
+    <p>
+      Chemistrie is what happened when their patient list became a waiting list.
+    </p>
+
+    <div class="founders__signoff">
+      <span class="founders__sig">— Dr. A &amp; Dr. M</span>
+      <span class="founders__sig-sub">Compounding Pharmacists · Founders</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Active Index — Pinned horizontal showcase ───── -->
+<section class="actives" id="actives" data-screen-label="06 Active Index">
+  <div class="actives__intro">
+    <span class="eyebrow">— The Active Index —</span>
+    <h2 class="display-h">Twelve ingredients,<br/>scroll-by-<em>scroll.</em></h2>
+    <p class="actives__lede">Each active, one at a time. Concentration, source, half-life, the formula it lives in. Scroll horizontally — the pharmacist will hand you the next.</p>
+    <div class="actives__counter">
+      <span class="actives__counter-current" id="activesCurrent">01</span>
+      <span class="actives__counter-sep">/</span>
+      <span class="actives__counter-total">12</span>
+    </div>
+  </div>
+
+  <div class="actives__pin" id="activesPin">
+    <div class="actives__track" id="activesTrack">
+
+      <article class="active-card active-card--hero" data-idx="0">
+        <span class="active-card__num">N°<strong>01</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <circle cx="120" cy="120" r="68"/>
+            <circle cx="120" cy="52" r="7" fill="currentColor"/>
+            <circle cx="188" cy="120" r="7" fill="currentColor"/>
+            <circle cx="120" cy="188" r="7" fill="currentColor"/>
+            <circle cx="52" cy="120" r="7" fill="currentColor"/>
+            <line x1="120" y1="58" x2="120" y2="98"/>
+            <line x1="120" y1="142" x2="120" y2="182"/>
+            <line x1="58" y1="120" x2="98" y2="120"/>
+            <line x1="142" y1="120" x2="182" y2="120"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Hero active</span>
+        <h3 class="active-card__name">Retinaldehyde</h3>
+        <span class="active-card__dose">0.05%</span>
+        <p class="active-card__desc">Eleven times faster than retinol. Half the irritation. The dose only a pharmacist would risk.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Switzerland · USP</dd></div>
+          <div><dt>Half-life</dt><dd>12 mo · sealed</dd></div>
+          <div><dt>Found in</dt><dd>N°01 Renewal</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card" data-idx="1">
+        <span class="active-card__num">N°<strong>02</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <path d="M120 40L172 70V130L120 160L68 130V70Z"/>
+            <circle cx="120" cy="40" r="6" fill="currentColor"/>
+            <circle cx="172" cy="70" r="6" fill="currentColor"/>
+            <circle cx="172" cy="130" r="6" fill="currentColor"/>
+            <circle cx="120" cy="160" r="6" fill="currentColor"/>
+            <circle cx="68" cy="130" r="6" fill="currentColor"/>
+            <circle cx="68" cy="70" r="6" fill="currentColor"/>
+            <line x1="120" y1="160" x2="120" y2="200"/>
+            <circle cx="120" cy="200" r="6" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Hero active</span>
+        <h3 class="active-card__name">L-Ascorbic Acid</h3>
+        <span class="active-card__dose">15%</span>
+        <p class="active-card__desc">Stabilised with ferulic and tocopherol. The pharmacist's gold standard for brightening.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Scotland · USP</dd></div>
+          <div><dt>Half-life</dt><dd>8 mo · amber</dd></div>
+          <div><dt>Found in</dt><dd>N°02 Vit-C</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card active-card--hero" data-idx="2">
+        <span class="active-card__num">N°<strong>03</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <circle cx="90" cy="120" r="32"/>
+            <circle cx="150" cy="120" r="32"/>
+            <line x1="122" y1="120" x2="118" y2="120" stroke-width="2"/>
+            <circle cx="60" cy="90" r="5" fill="currentColor"/>
+            <circle cx="180" cy="90" r="5" fill="currentColor"/>
+            <circle cx="60" cy="150" r="5" fill="currentColor"/>
+            <circle cx="180" cy="150" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Hero active</span>
+        <h3 class="active-card__name">Niacinamide</h3>
+        <span class="active-card__dose">4%</span>
+        <p class="active-card__desc">Refines pore visibility, reinforces barrier. Universally well-tolerated.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>USP · pH 5.4</dd></div>
+          <div><dt>Half-life</dt><dd>36 months</dd></div>
+          <div><dt>Found in</dt><dd>N°01 · 04 · 06</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card active-card--hero" data-idx="3">
+        <span class="active-card__num">N°<strong>04</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <path d="M120 50C90 50 70 80 70 110C70 140 90 170 120 190C150 170 170 140 170 110C170 80 150 50 120 50Z"/>
+            <line x1="120" y1="50" x2="120" y2="190"/>
+            <line x1="80" y1="120" x2="160" y2="120"/>
+            <circle cx="120" cy="50" r="5" fill="currentColor"/>
+            <circle cx="120" cy="190" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Hero active</span>
+        <h3 class="active-card__name">Bakuchiol</h3>
+        <span class="active-card__dose">1%</span>
+        <p class="active-card__desc">Botanical retinol-alternative for pregnancy and the most sensitive nights.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>India · botanical</dd></div>
+          <div><dt>Half-life</dt><dd>24 months</dd></div>
+          <div><dt>Found in</dt><dd>N°03 Golden Oil</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card" data-idx="4">
+        <span class="active-card__num">N°<strong>05</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <polygon points="120,50 175,90 155,160 85,160 65,90"/>
+            <circle cx="120" cy="50" r="6" fill="currentColor"/>
+            <circle cx="175" cy="90" r="6" fill="currentColor"/>
+            <circle cx="155" cy="160" r="6" fill="currentColor"/>
+            <circle cx="85" cy="160" r="6" fill="currentColor"/>
+            <circle cx="65" cy="90" r="6" fill="currentColor"/>
+            <line x1="120" y1="120" x2="120" y2="190"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Supporting</span>
+        <h3 class="active-card__name">Mandelic Acid</h3>
+        <span class="active-card__dose">8%</span>
+        <p class="active-card__desc">The kindest AHA. Large molecule, slow penetration, dignified results.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Almond · USP</dd></div>
+          <div><dt>Half-life</dt><dd>18 months</dd></div>
+          <div><dt>Found in</dt><dd>N°05 Tonic</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card" data-idx="5">
+        <span class="active-card__num">N°<strong>06</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <path d="M60 120Q80 60 120 90T180 60T180 120T140 180T80 150T60 120Z"/>
+            <circle cx="80" cy="100" r="5" fill="currentColor"/>
+            <circle cx="120" cy="90" r="5" fill="currentColor"/>
+            <circle cx="160" cy="100" r="5" fill="currentColor"/>
+            <circle cx="140" cy="160" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Supporting</span>
+        <h3 class="active-card__name">Peptide-5</h3>
+        <span class="active-card__dose">2%</span>
+        <p class="active-card__desc">Signals collagen synthesis. Daily, undramatic improvement.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Switzerland</dd></div>
+          <div><dt>Half-life</dt><dd>24 months</dd></div>
+          <div><dt>Found in</dt><dd>N°04 Cream</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card active-card--hero" data-idx="6">
+        <span class="active-card__num">N°<strong>07</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <path d="M60 90L120 60L180 90L180 150L120 180L60 150Z"/>
+            <line x1="60" y1="90" x2="120" y2="120"/>
+            <line x1="120" y1="120" x2="180" y2="90"/>
+            <line x1="120" y1="120" x2="120" y2="180"/>
+            <circle cx="120" cy="120" r="6" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Hero active</span>
+        <h3 class="active-card__name">Ceramide Complex</h3>
+        <span class="active-card__dose">NP·AP·EOP</span>
+        <p class="active-card__desc">Three ceramides mirroring the lipid ratio of healthy young skin.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Japan · bio-id</dd></div>
+          <div><dt>Half-life</dt><dd>30 months</dd></div>
+          <div><dt>Found in</dt><dd>N°04 Velvet</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card" data-idx="7">
+        <span class="active-card__num">N°<strong>08</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <ellipse cx="120" cy="120" rx="68" ry="40"/>
+            <ellipse cx="120" cy="120" rx="40" ry="68"/>
+            <circle cx="120" cy="120" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Supporting</span>
+        <h3 class="active-card__name">Squalane</h3>
+        <span class="active-card__dose">100%</span>
+        <p class="active-card__desc">Plant-derived. Pharmaceutical-grade. Closes the ritual, never clogs.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Spain · olive</dd></div>
+          <div><dt>Half-life</dt><dd>36 months</dd></div>
+          <div><dt>Found in</dt><dd>N°03 Oil</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card" data-idx="8">
+        <span class="active-card__num">N°<strong>09</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <path d="M120 60L120 180M90 90L150 90M90 150L150 150M70 120L170 120"/>
+            <circle cx="120" cy="60" r="6" fill="currentColor"/>
+            <circle cx="120" cy="180" r="6" fill="currentColor"/>
+            <circle cx="70" cy="120" r="6" fill="currentColor"/>
+            <circle cx="170" cy="120" r="6" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Supporting</span>
+        <h3 class="active-card__name">Calendula</h3>
+        <span class="active-card__dose">3%</span>
+        <p class="active-card__desc">Anti-inflammatory infusion. The reason redness softens, not just hides.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Houston · fresh</dd></div>
+          <div><dt>Half-life</dt><dd>9 months</dd></div>
+          <div><dt>Found in</dt><dd>N°04b Balm</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card active-card--hero" data-idx="9">
+        <span class="active-card__num">N°<strong>10</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <circle cx="80" cy="120" r="28"/>
+            <circle cx="120" cy="120" r="40"/>
+            <circle cx="160" cy="120" r="28"/>
+            <circle cx="80" cy="120" r="5" fill="currentColor"/>
+            <circle cx="160" cy="120" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Hero active</span>
+        <h3 class="active-card__name">Hyaluronic, 3-MW</h3>
+        <span class="active-card__dose">2%</span>
+        <p class="active-card__desc">Low, mid and high molecular weights — together. Hydration at every layer.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Bio-fermented</dd></div>
+          <div><dt>Half-life</dt><dd>24 months</dd></div>
+          <div><dt>Found in</dt><dd>Whole ritual</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card" data-idx="10">
+        <span class="active-card__num">N°<strong>11</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <path d="M70 70L170 70L170 170L70 170Z"/>
+            <line x1="70" y1="120" x2="170" y2="120"/>
+            <line x1="120" y1="70" x2="120" y2="170"/>
+            <circle cx="120" cy="120" r="6" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Supporting</span>
+        <h3 class="active-card__name">Allantoin</h3>
+        <span class="active-card__dose">1%</span>
+        <p class="active-card__desc">Soothes, smooths, accelerates barrier repair after every active.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>USP-grade</dd></div>
+          <div><dt>Half-life</dt><dd>36 months</dd></div>
+          <div><dt>Found in</dt><dd>N°01 · 04</dd></div>
+        </dl>
+      </article>
+
+      <article class="active-card" data-idx="11">
+        <span class="active-card__num">N°<strong>12</strong></span>
+        <div class="active-card__mol">
+          <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.1">
+            <path d="M120 60Q160 100 120 140Q80 100 120 60ZM120 100Q160 140 120 180Q80 140 120 100Z"/>
+            <circle cx="120" cy="60" r="5" fill="currentColor"/>
+            <circle cx="120" cy="180" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="active-card__tier">— Supporting</span>
+        <h3 class="active-card__name">Centella Asiatica</h3>
+        <span class="active-card__dose">5%</span>
+        <p class="active-card__desc">Madecassoside-rich. The bench's favourite calming active.</p>
+        <dl class="active-card__specs">
+          <div><dt>Source</dt><dd>Korea · USP</dd></div>
+          <div><dt>Half-life</dt><dd>24 months</dd></div>
+          <div><dt>Found in</dt><dd>N°05 Tonic</dd></div>
+        </dl>
+      </article>
+
+    </div>
+
+    <!-- Progress bar -->
+    <div class="actives__progress">
+      <div class="actives__progress-track">
+        <div class="actives__progress-fill" id="activesProgress"></div>
+      </div>
+      <div class="actives__progress-meta">
+        <span class="actives__progress-label">Scroll to advance</span>
+        <span class="actives__progress-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Numbers / proof ───── -->
+<section class="proof" data-screen-label="07 Proof">
+  <div class="proof__head">
+    <span class="eyebrow">— The Pharmacy Standard —</span>
+    <h2 class="display-h">Numbers, not <em>noise.</em></h2>
+  </div>
+
+  <div class="proof__grid">
+    <div class="proof__cell">
+      <span class="proof__num" data-count="0" data-suffix="">0</span>
+      <span class="proof__label">Fillers, fragrance, fluff.</span>
+    </div>
+    <div class="proof__cell">
+      <span class="proof__num" data-count="100" data-suffix="%">0%</span>
+      <span class="proof__label">Pharmacist-formulated. Every batch.</span>
+    </div>
+    <div class="proof__cell">
+      <span class="proof__num" data-count="28" data-suffix="">0</span>
+      <span class="proof__label">Clinically respected actives.</span>
+    </div>
+    <div class="proof__cell">
+      <span class="proof__num" data-count="14" data-suffix=""><span class="proof__num-n">0</span><span class="proof__num-u">days</span></span>
+      <span class="proof__label">Money-back, no-questions ritual trial.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───── The Ritual — horizontal ───── -->
+<section class="ritual" id="ritual" data-screen-label="08 Ritual">
+  <div class="ritual__intro">
+    <span class="eyebrow">— The Ritual —</span>
+    <h2 class="display-h">Four<br/><em>quiet</em> steps.</h2>
+    <p>The Chemistrie ritual was written on a prescription pad, then engraved on a brass card. Slow it down. Layer thin. Wait for the skin to ask.</p>
+  </div>
+
+  <div class="ritual__pin">
+    <div class="ritual__track" id="ritualTrack">
+
+      <div class="ritual-step">
+        <span class="ritual-step__num">i.</span>
+        <h3>Cleanse</h3>
+        <p class="ritual-step__time">90 seconds</p>
+        <p>A milk that lifts without stripping. Worked into dry skin with both hands, eyes closed, breath slow.</p>
+        <div class="ritual-step__chip">Velvet Milk · No. 00</div>
+      </div>
+
+      <div class="ritual-step">
+        <span class="ritual-step__num">ii.</span>
+        <h3>Tone</h3>
+        <p class="ritual-step__time">A pause</p>
+        <p>Mandelic acid at 8%, low and weekly. Sweep across the T-zone with a cotton round. Then wait, dignified, for sixty seconds.</p>
+        <div class="ritual-step__chip">Clarifying Tonic · No. 05</div>
+      </div>
+
+      <div class="ritual-step">
+        <span class="ritual-step__num">iii.</span>
+        <h3>Treat</h3>
+        <p class="ritual-step__time">2 drops</p>
+        <p>Retinaldehyde at night. L-Ascorbic in morning. Press, do not rub. The face is not a counter to be wiped down.</p>
+        <div class="ritual-step__chip">Renewal Serum · No. 01</div>
+      </div>
+
+      <div class="ritual-step">
+        <span class="ritual-step__num">iv.</span>
+        <h3>Seal</h3>
+        <p class="ritual-step__time">One pearl</p>
+        <p>The Velvet Cream, warmed between the palms. Pressed upward along the jaw, the cheekbones, the brow. A small ceremony, every night.</p>
+        <div class="ritual-step__chip">Velvet Cream · No. 04</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───── Testimonials marquee ───── -->
+<section class="testimonials" data-screen-label="09 Testimonials">
+  <div class="testimonials__head">
+    <span class="eyebrow">— In Her Words —</span>
+    <h2 class="display-h">Women who <em>knew</em> better.<br/>And chose us anyway.</h2>
+  </div>
+
+  <div class="testimonials__row">
+    <figure class="testimonial">
+      <blockquote>"I have been a dermatology nurse for nineteen years. This is the first brand I trust on my own daughter's face."</blockquote>
+      <figcaption>— Marisol R., Houston, TX · Verified Buyer</figcaption>
+    </figure>
+    <figure class="testimonial testimonial--alt">
+      <blockquote>"The pharmacist wrote me back personally about my redness. I bought three more bottles that afternoon."</blockquote>
+      <figcaption>— Priya S., Austin, TX · Verified Buyer</figcaption>
+    </figure>
+    <figure class="testimonial">
+      <blockquote>"Heavy glass. Numbered batch. A handwritten card. I keep the box on my dresser."</blockquote>
+      <figcaption>— Linnea H., Dallas, TX · Verified Buyer</figcaption>
+    </figure>
+    <figure class="testimonial testimonial--alt">
+      <blockquote>"Made by pharmacists, made for the women they love — finally a tagline that delivers on the bottle, too."</blockquote>
+      <figcaption>— Camille D., New Orleans, LA · Verified Buyer</figcaption>
+    </figure>
+  </div>
+
+  <div class="testimonials__press">
+    <span>As featured in</span>
+    <em>VOGUE</em>
+    <em>HARPER'S BAZAAR</em>
+    <em>WSJ.</em>
+    <em>ALLURE</em>
+    <em>TOWN &amp; COUNTRY</em>
+  </div>
+</section>
+
+<!-- ───── Brand Story — chapters ───── -->
+<section class="story" id="our-story" data-screen-label="10 Brand Story">
+  <div class="story__intro">
+    <span class="eyebrow">— The Brand Story —</span>
+    <h2 class="display-h">Five quiet chapters.<br/><em>One bench.</em></h2>
+    <p class="story__lede">Chemistrie was not founded in a boardroom. It was founded one milligram at a time, over a decade, on a single compounding bench in Houston.</p>
+  </div>
+
+  <ol class="story__chapters">
+
+    <li class="story__chapter">
+      <div class="story__chapter-meta">
+        <span class="story__year">2014</span>
+        <span class="story__roman">— I —</span>
+      </div>
+      <div class="story__chapter-body">
+        <h3>The bench, on Heights Boulevard.</h3>
+        <p>Dr. A and Dr. M meet across the same compounding bench in Houston. A decade of weighing actives by the milligram begins — for patients, for partners, for the women they go home to.</p>
+      </div>
+      <div class="story__chapter-photo">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="st1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dec39a"/><stop offset="1" stop-color="#8a6f48"/></linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#st1)"/>
+          <rect y="320" width="400" height="180" fill="#1a3a2d" opacity=".7"/>
+          <rect x="190" y="180" width="20" height="160" fill="#0e2118"/>
+          <rect x="100" y="170" width="200" height="10" rx="5" fill="#0e2118"/>
+          <circle cx="120" cy="200" r="22" fill="#c8aa7a"/>
+          <circle cx="280" cy="200" r="22" fill="#c8aa7a"/>
+          <line x1="120" y1="178" x2="120" y2="200" stroke="#0e2118" stroke-width="2"/>
+          <line x1="280" y1="178" x2="280" y2="200" stroke="#0e2118" stroke-width="2"/>
+          <ellipse cx="200" cy="340" rx="100" ry="6" fill="#000" opacity=".3"/>
+          <text x="40" y="470" font-family="JetBrains Mono,monospace" font-size="9" fill="#c8aa7a" letter-spacing="2">CHAPTER I · 2014</text>
+        </svg>
+      </div>
+    </li>
+
+    <li class="story__chapter story__chapter--reverse">
+      <div class="story__chapter-meta">
+        <span class="story__year">2018</span>
+        <span class="story__roman">— II —</span>
+      </div>
+      <div class="story__chapter-body">
+        <h3>The first wife. The first formula.</h3>
+        <p>Dr. M's wife asks for a retinol that does not burn. He compounds 0.05% retinaldehyde with niacinamide in a backroom mortar. Within four weeks, six other patients are asking for the same bottle.</p>
+      </div>
+      <div class="story__chapter-photo">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="st2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d6b54"/><stop offset="1" stop-color="#1a3a2d"/></linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#st2)"/>
+          <ellipse cx="200" cy="420" rx="120" ry="14" fill="#000" opacity=".4"/>
+          <rect x="174" y="120" width="52" height="60" rx="4" fill="#c8aa7a"/>
+          <path d="M150 180 Q150 168 180 168 H220 Q250 168 250 180 V410 Q250 432 220 432 H180 Q150 432 150 410 Z" fill="#0e2118"/>
+          <rect x="160" y="260" width="80" height="120" fill="#f9f4ed"/>
+          <text x="200" y="290" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#1a3a2d">No. 01</text>
+          <line x1="172" y1="300" x2="228" y2="300" stroke="#c8aa7a" stroke-width="0.5"/>
+          <text x="200" y="320" text-anchor="middle" font-family="Cormorant Garamond" font-size="10" letter-spacing="2" fill="#1a3a2d">RENEWAL</text>
+          <text x="200" y="334" text-anchor="middle" font-family="Cormorant Garamond" font-size="10" letter-spacing="2" fill="#1a3a2d">SERUM</text>
+          <text x="40" y="470" font-family="JetBrains Mono,monospace" font-size="9" fill="#c8aa7a" letter-spacing="2">CHAPTER II · 2018</text>
+        </svg>
+      </div>
+    </li>
+
+    <li class="story__chapter">
+      <div class="story__chapter-meta">
+        <span class="story__year">2022</span>
+        <span class="story__roman">— III —</span>
+      </div>
+      <div class="story__chapter-body">
+        <h3>The patient list becomes a waiting list.</h3>
+        <p>Friends of friends. A dermatology nurse's daughter. A schoolteacher in Austin. The bench cannot pour fast enough. The pharmacists begin labelling batches by hand, numbering each bottle as it leaves.</p>
+      </div>
+      <div class="story__chapter-photo">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="st3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ebe3d2"/><stop offset="1" stop-color="#c8aa7a"/></linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#st3)"/>
+          <g transform="rotate(-3 200 250)">
+            <rect x="60" y="140" width="280" height="240" fill="#f9f4ed"/>
+            <line x1="80" y1="190" x2="320" y2="190" stroke="#1a3a2d" stroke-width="1"/>
+            <text x="80" y="184" font-family="Cormorant Garamond" font-style="italic" font-size="18" fill="#1a3a2d">— Waiting List, Vol. III</text>
+            <text x="80" y="218" font-family="Cormorant Garamond" font-style="italic" font-size="13" fill="#1a3a2d">1.  Mrs. Eleanor R. — Houston</text>
+            <text x="80" y="242" font-family="Cormorant Garamond" font-style="italic" font-size="13" fill="#1a3a2d">2.  Priya S. — Austin</text>
+            <text x="80" y="266" font-family="Cormorant Garamond" font-style="italic" font-size="13" fill="#1a3a2d">3.  Camille D. — New Orleans</text>
+            <text x="80" y="290" font-family="Cormorant Garamond" font-style="italic" font-size="13" fill="#1a3a2d">4.  Marisol M. — Houston</text>
+            <text x="80" y="314" font-family="Cormorant Garamond" font-style="italic" font-size="13" fill="#1a3a2d">5.  Aanya P. — Dallas</text>
+            <text x="80" y="338" font-family="Cormorant Garamond" font-style="italic" font-size="13" fill="#1a3a2d">6.  Linnea H. — Houston</text>
+          </g>
+          <text x="40" y="470" font-family="JetBrains Mono,monospace" font-size="9" fill="#1a3a2d" letter-spacing="2">CHAPTER III · 2022</text>
+        </svg>
+      </div>
+    </li>
+
+    <li class="story__chapter story__chapter--reverse">
+      <div class="story__chapter-meta">
+        <span class="story__year">2025</span>
+        <span class="story__roman">— IV —</span>
+      </div>
+      <div class="story__chapter-body">
+        <h3>The maison takes a name.</h3>
+        <p>A glassblower three blocks away. A letterpress in the same city. A photographer who shoots only in west afternoon light. The house is named on a Tuesday — Chemistrie, for the chemistry of patience, hands, and a woman's nightly ritual.</p>
+      </div>
+      <div class="story__chapter-photo">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="st4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e2118"/><stop offset="1" stop-color="#1a3a2d"/></linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#st4)"/>
+          <text x="200" y="230" text-anchor="middle" font-family="Cormorant Garamond" font-weight="500" font-size="38" fill="#f9f4ed" letter-spacing="12">CHEMISTRIE</text>
+          <line x1="120" y1="260" x2="280" y2="260" stroke="#c8aa7a" stroke-width="0.5"/>
+          <text x="200" y="290" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="16" fill="#c8aa7a">est. Houston, 2025</text>
+          <text x="200" y="320" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#dec39a" letter-spacing="3">A PHARMACIST'S MAISON</text>
+          <text x="40" y="470" font-family="JetBrains Mono,monospace" font-size="9" fill="#c8aa7a" letter-spacing="2">CHAPTER IV · 2025</text>
+        </svg>
+      </div>
+    </li>
+
+    <li class="story__chapter">
+      <div class="story__chapter-meta">
+        <span class="story__year">2026</span>
+        <span class="story__roman">— V —</span>
+      </div>
+      <div class="story__chapter-body">
+        <h3>Today. And the women, still.</h3>
+        <p>Twelve formulas. Two hundred bottles a batch. A pharmacist on the phone, always. Chemistrie is the same bench it always was — only now, with a door open to you.</p>
+        <a href="#shop" class="story__chapter-cta">
+          <span>Step inside the maison</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="story__chapter-photo">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="st5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6c8f7b"/><stop offset="1" stop-color="#1a3a2d"/></linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#st5)"/>
+          <rect y="380" width="400" height="20" fill="#0e2118"/>
+          <g transform="translate(50 220)"><rect width="36" height="160" rx="3" fill="#1a3a2d"/><rect x="4" y="70" width="28" height="56" fill="#f9f4ed"/></g>
+          <g transform="translate(110 200)"><rect width="36" height="180" rx="3" fill="#3d6b54"/><rect x="4" y="80" width="28" height="60" fill="#f9f4ed"/></g>
+          <g transform="translate(170 230)"><rect width="36" height="150" rx="3" fill="#c8aa7a"/><rect x="4" y="60" width="28" height="56" fill="#f9f4ed"/></g>
+          <g transform="translate(230 210)"><rect width="36" height="170" rx="3" fill="#1a3a2d"/><rect x="4" y="70" width="28" height="60" fill="#f9f4ed"/></g>
+          <g transform="translate(290 240)"><rect width="36" height="140" rx="3" fill="#0e2118"/><rect x="4" y="60" width="28" height="50" fill="#f9f4ed"/></g>
+          <ellipse cx="200" cy="400" rx="180" ry="6" fill="#000" opacity=".5"/>
+          <text x="40" y="470" font-family="JetBrains Mono,monospace" font-size="9" fill="#c8aa7a" letter-spacing="2">CHAPTER V · 2026</text>
+        </svg>
+      </div>
+    </li>
+
+  </ol>
+</section>
+
+<!-- ───── Instagram — horizontal reel slider ───── -->
+<section class="insta" id="instagram" data-screen-label="11 Instagram">
+  <div class="insta__intro">
+    <div>
+      <span class="eyebrow">— The Bench, on Instagram —</span>
+      <h2 class="display-h">Find us <em>between</em><br/>the bottles.</h2>
+    </div>
+    <div class="insta__intro-right">
+      <a class="insta__handle" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>
+        <span>@chemistrie.co</span>
+        <em>· 21.4k</em>
+      </a>
+      <div class="insta__nav" aria-label="Slider navigation">
+        <button class="insta__arrow" data-dir="-1" aria-label="Previous">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="insta__arrow" data-dir="1" aria-label="Next">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="insta__slider-wrap">
+    <div class="insta__slider" id="instaSlider">
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dec39a"/><stop offset="1" stop-color="#a78a5e"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig1)"/>
+            <ellipse cx="160" cy="380" rx="120" ry="14" fill="#1a3a2d" opacity=".25"/>
+            <rect x="138" y="100" width="44" height="60" rx="4" fill="#1a3a2d"/>
+            <path d="M104 168 Q104 156 132 156 H188 Q216 156 216 168 V370 Q216 392 188 392 H132 Q104 392 104 370 Z" fill="#0e2118"/>
+            <rect x="120" y="240" width="80" height="110" fill="#f9f4ed"/>
+            <text x="160" y="270" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="12" fill="#1a3a2d">No. 01</text>
+            <text x="160" y="295" text-anchor="middle" font-family="Cormorant Garamond" font-size="10" letter-spacing="2" fill="#1a3a2d">RENEWAL</text>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">0:42</span>
+        </div>
+        <div class="reel__meta">
+          <p>One drop, eleven hours of patience.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 2.4k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 88</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d6b54"/><stop offset="1" stop-color="#0e2118"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig2)"/>
+            <ellipse cx="100" cy="260" rx="60" ry="40" fill="#dec39a"/>
+            <ellipse cx="220" cy="280" rx="60" ry="40" fill="#dec39a"/>
+            <rect x="140" y="200" width="40" height="120" rx="4" fill="#c8aa7a"/>
+            <circle cx="160" cy="180" r="4" fill="#c8aa7a"/>
+            <text x="160" y="440" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="15" fill="#c8aa7a">pouring batch 027</text>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">1:08</span>
+        </div>
+        <div class="reel__meta">
+          <p>Behind the bench — pouring N°027.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 3.1k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 142</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1e4c8"/><stop offset="1" stop-color="#c8aa7a"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig3)"/>
+            <g transform="rotate(-4 160 240)">
+              <rect x="60" y="120" width="200" height="240" fill="#f9f4ed"/>
+              <text x="80" y="166" font-family="Cormorant Garamond" font-style="italic" font-size="17" fill="#1a3a2d">For Eleanor —</text>
+              <line x1="80" y1="200" x2="240" y2="200" stroke="#a78a5e" stroke-width="0.4"/>
+              <line x1="80" y1="222" x2="220" y2="222" stroke="#a78a5e" stroke-width="0.4"/>
+              <line x1="80" y1="244" x2="230" y2="244" stroke="#a78a5e" stroke-width="0.4"/>
+              <line x1="80" y1="266" x2="200" y2="266" stroke="#a78a5e" stroke-width="0.4"/>
+              <text x="220" y="320" text-anchor="end" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#1a3a2d">— Dr. M</text>
+            </g>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">0:34</span>
+        </div>
+        <div class="reel__meta">
+          <p>The letter that goes in every parcel.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 4.8k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 216</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8aab98"/><stop offset="1" stop-color="#3d6b54"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig4)"/>
+            <ellipse cx="160" cy="220" rx="100" ry="120" fill="#dec39a" opacity=".85"/>
+            <ellipse cx="138" cy="218" rx="6" ry="3" fill="#1a3a2d"/>
+            <ellipse cx="182" cy="218" rx="6" ry="3" fill="#1a3a2d"/>
+            <path d="M148 260 Q160 268 172 260" stroke="#a78a5e" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <text x="160" y="420" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#f9f4ed">night 56 — review</text>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">2:14</span>
+        </div>
+        <div class="reel__meta">
+          <p>Eleanor's eight-week review — her words.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 8.2k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 412</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dec39a"/><stop offset="1" stop-color="#8a6f48"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig5)"/>
+            <circle cx="80" cy="180" r="38" fill="#6c8f7b"/>
+            <circle cx="160" cy="200" r="38" fill="#1a3a2d"/>
+            <circle cx="240" cy="180" r="38" fill="#c8aa7a"/>
+            <text x="80" y="184" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#f9f4ed">retinal</text>
+            <text x="160" y="204" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#f9f4ed">niacin.</text>
+            <text x="240" y="184" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#1a3a2d">ferulic</text>
+            <text x="160" y="290" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="18" fill="#1a3a2d">three actives, one bottle.</text>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">0:58</span>
+        </div>
+        <div class="reel__meta">
+          <p>What's in the Renewal Serum, milligram by milligram.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 5.6k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 304</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e2118"/><stop offset="1" stop-color="#1a3a2d"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig6)"/>
+            <text x="160" y="200" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="32" fill="#c8aa7a">"Something has</text>
+            <text x="160" y="240" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="32" fill="#c8aa7a">changed."</text>
+            <line x1="100" y1="280" x2="220" y2="280" stroke="#c8aa7a" stroke-width="0.5"/>
+            <text x="160" y="310" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#dec39a" letter-spacing="2">— PRIYA S., NIGHT 14</text>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">0:21</span>
+        </div>
+        <div class="reel__meta">
+          <p>Two weeks in. Priya's voice memo.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 6.7k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 280</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8aa7a"/><stop offset="1" stop-color="#8a6f48"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig7)"/>
+            <rect x="60" y="280" width="200" height="120" fill="#0e2118"/>
+            <rect x="60" y="280" width="200" height="14" fill="#1a3a2d"/>
+            <rect x="148" y="240" width="24" height="160" fill="#c8aa7a"/>
+            <text x="160" y="350" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="16" fill="#c8aa7a">CHEMISTRIE</text>
+            <text x="160" y="370" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6" fill="#c8aa7a" letter-spacing="2">N° 027 / 200</text>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">0:46</span>
+        </div>
+        <div class="reel__meta">
+          <p>How we pack a Chemistrie order, end to end.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 11.2k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 502</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig8" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ebe3d2"/><stop offset="1" stop-color="#c8aa7a"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig8)"/>
+            <g transform="rotate(-6 160 240)"><rect x="80" y="140" width="32" height="180" fill="#c8aa7a"/><rect x="80" y="140" width="32" height="60" fill="#8a6f48"/></g>
+            <g transform="rotate(2 160 240)"><rect x="140" y="130" width="32" height="200" fill="#dec39a"/><rect x="140" y="130" width="32" height="50" fill="#a78a5e"/></g>
+            <g transform="rotate(-3 160 240)"><rect x="200" y="145" width="32" height="180" fill="#6c8f7b"/><rect x="200" y="145" width="32" height="70" fill="#3d6b54"/></g>
+            <text x="160" y="400" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#1a3a2d" letter-spacing="2">pH READING · 5.4 ± 0.2</text>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">0:29</span>
+        </div>
+        <div class="reel__meta">
+          <p>Why pH 5.4 is the only number we trust.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 1.8k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 64</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="reel">
+        <div class="reel__media">
+          <svg viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="ig9" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6c8f7b"/><stop offset="1" stop-color="#1a3a2d"/></linearGradient></defs>
+            <rect width="320" height="480" fill="url(#ig9)"/>
+            <ellipse cx="160" cy="260" rx="100" ry="64" fill="#0e2118"/>
+            <ellipse cx="160" cy="250" rx="84" ry="44" fill="#1a3a2d"/>
+            <ellipse cx="160" cy="246" rx="48" ry="22" fill="#dec39a" opacity=".5"/>
+            <rect x="156" y="100" width="10" height="160" rx="5" fill="#c8aa7a"/>
+            <ellipse cx="161" cy="100" rx="16" ry="10" fill="#1a3a2d"/>
+            <text x="160" y="420" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#c8aa7a">fourteen minutes by hand.</text>
+          </svg>
+          <span class="reel__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="reel__duration">1:24</span>
+        </div>
+        <div class="reel__meta">
+          <p>Fourteen-minute hand blend, in real time.</p>
+          <div class="reel__stats">
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6 7 10 7 10s7-4 7-10z"/></svg> 3.4k</span>
+            <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4-.7L3 20l1-3.7C3.4 15.2 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7z"/></svg> 174</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="insta__dots" id="instaDots"></div>
+  </div>
+
+  <a class="insta__cta" href="#" target="_blank" rel="noopener">
+    <span>Follow the bench →</span>
+  </a>
+</section>
+
+<!-- ───── Newsletter CTA ───── -->
+<section class="cta" data-screen-label="12 Newsletter">
+  <div class="cta__card">
+    <span class="cta__corner cta__corner--tl"></span>
+    <span class="cta__corner cta__corner--tr"></span>
+    <span class="cta__corner cta__corner--bl"></span>
+    <span class="cta__corner cta__corner--br"></span>
+
+    <span class="eyebrow eyebrow--light">— Letters from the Bench —</span>
+    <h2 class="display-h display-h--light">Receive the first<br/>pharmacist's <em>letter.</em></h2>
+    <p class="cta__sub">A quiet, monthly note from Dr. A &amp; Dr. M — new formulations, ritual edits, and the occasional invitation. Never marketing.</p>
+
+    <form class="cta__form" onsubmit="event.preventDefault(); this.classList.add('cta__form--sent');">
+      <label class="cta__field">
+        <span>Your email</span>
+        <input type="email" placeholder="you@elsewhere.com" required />
+      </label>
+      <button class="btn btn--primary btn--light" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="cta__sent">Thank you. The first letter arrives at the start of next month. ✦</p>
+    </form>
+  </div>
+</section>
+
+<!-- ───── Footer ───── -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <span class="footer__wordmark">CHEMISTRIE</span>
+      <p class="footer__tag">Made by pharmacists.<br/>Made for the women they love.</p>
+      <div class="footer__seal">
+        <span>Rx</span>
+        <em>Pharmacist-formulated · Houston, TX</em>
+      </div>
+    </div>
+
+    <nav class="footer__col">
+      <h4>Shop</h4>
+      <a href="#">The Collection</a>
+      <a href="#">Renewal Serum</a>
+      <a href="#">Vitamin C Elixir</a>
+      <a href="#">Golden Oil</a>
+      <a href="#">The Ritual Set</a>
+      <a href="#">Gift Cards</a>
+    </nav>
+
+    <nav class="footer__col">
+      <h4>The House</h4>
+      <a href="#">Our Story</a>
+      <a href="#">The Pharmacists</a>
+      <a href="#">Compounding Lab</a>
+      <a href="#">Journal</a>
+      <a href="#">Press</a>
+      <a href="#">Med-Spa Partnerships</a>
+    </nav>
+
+    <nav class="footer__col">
+      <h4>Care</h4>
+      <a href="#">Skin Consultation</a>
+      <a href="#">Shipping &amp; Returns</a>
+      <a href="#">14-Day Ritual Trial</a>
+      <a href="#">Ingredient Index</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact a Pharmacist</a>
+    </nav>
+  </div>
+
+  <div class="footer__bot">
+    <span>© Chemistrie LLC, 2026. Compounded with care in Houston.</span>
+    <div class="footer__legal">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Accessibility</a>
+    </div>
+    <div class="footer__social">
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+      </a>
+      <a href="#" aria-label="Pinterest">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M11 22 13 13M9 9c0-2 1.5-4 4-4s4 2 4 4-1 5-4 5c-1.2 0-2-1-2-2"/></svg>
+      </a>
+      <a href="#" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10a4 4 0 1 1-4-4M14 4c0 3 2 5 5 5"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer__wordmark-huge" aria-hidden="true">CHEMISTRIE</div>
+</footer>
+
+</main>
+
+<!-- Tweaks UI -->
+<div id="tweaks-root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="chemistrie.js"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="chemistrie-tweaks.jsx"></script>
+
+</body>
+</html>

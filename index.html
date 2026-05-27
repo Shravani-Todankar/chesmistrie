@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CHEMISTRIE — Three Homepage Directions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --c-forest: #1a3a2d;
+  --c-forest-2: #0e2118;
+  --c-sage: #6c8f7b;
+  --c-tan: #c8aa7a;
+  --c-cream: #f9f4ed;
+  --c-paper: #f3ecdf;
+  --c-line: rgba(26,58,45,.16);
+  --ff-display: "Cormorant Garamond", Georgia, serif;
+  --ff-body: "Inter", sans-serif;
+  --ff-mono: "JetBrains Mono", monospace;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--ff-body);
+  background: var(--c-cream);
+  color: var(--c-forest);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
+.shell {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 80px) clamp(24px, 5vw, 64px);
+}
+.head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: end;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--c-line);
+  margin-bottom: 56px;
+}
+.brand {
+  font-family: var(--ff-display);
+  font-size: 32px;
+  letter-spacing: .42em;
+  color: var(--c-forest);
+  font-weight: 500;
+}
+.kicker {
+  font-family: var(--ff-mono);
+  font-size: 10.5px;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--c-tan);
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.title {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(40px, 6vw, 88px);
+  line-height: .95;
+  letter-spacing: -.02em;
+  color: var(--c-forest);
+  margin: 0;
+}
+.title em { font-style: italic; color: var(--c-tan); }
+.meta {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(26,58,45,.5);
+  text-align: right;
+  line-height: 1.6;
+}
+.meta em { font-style: normal; color: var(--c-tan); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+}
+.card {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--c-line);
+  background: var(--c-paper);
+  transition: all .4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 60px -30px rgba(26,58,45,.32);
+  border-color: var(--c-tan);
+}
+.card__visual {
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+}
+.card__visual svg { width: 100%; height: 100%; display: block; }
+
+.card__body { padding: 28px 32px 32px; }
+.card__num {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--c-tan);
+  margin-bottom: 4px;
+}
+.card__name {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: -.01em;
+  margin: 0 0 6px;
+  color: var(--c-forest);
+}
+.card__tag {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(26,58,45,.5);
+}
+.card__desc {
+  margin: 18px 0 22px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(26,58,45,.7);
+}
+.card__sections {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--c-line);
+  display: flex; flex-direction: column;
+  gap: 6px;
+  font-family: var(--ff-mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(26,58,45,.65);
+}
+.card__sections li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  padding: 4px 0;
+}
+.card__sections li i {
+  color: var(--c-tan);
+  font-style: normal;
+}
+.card__cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  align-self: flex-start;
+  padding: 14px 22px;
+  background: var(--c-forest);
+  color: var(--c-cream);
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  transition: all .25s ease;
+}
+.card__cta:hover { background: var(--c-forest-2); }
+.card--dark { background: var(--c-forest); color: var(--c-cream); }
+.card--dark .card__name { color: var(--c-cream); }
+.card--dark .card__desc { color: rgba(249,244,237,.72); }
+.card--dark .card__sections { color: rgba(249,244,237,.6); border-top-color: rgba(249,244,237,.16); }
+.card--dark .card__cta { background: var(--c-tan); color: var(--c-forest-2); }
+.card--dark .card__cta:hover { background: var(--c-cream); }
+.card--dark .card__tag { color: rgba(249,244,237,.5); }
+
+.foot {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--c-line);
+  display: flex; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  font-family: var(--ff-mono);
+  font-size: 10.5px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(26,58,45,.5);
+}
+.foot em { font-style: normal; color: var(--c-tan); }
+
+@media (max-width: 1000px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) {
+  .head { grid-template-columns: 1fr; }
+  .meta { text-align: left; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<main class="shell">
+  <header class="head">
+    <div>
+      <span class="kicker">— Homepage Directions · Three Options</span>
+      <h1 class="title">CHEMISTRIE.<br/><em>Pick a direction.</em></h1>
+    </div>
+    <div class="meta">
+      Made by pharmacists.<br/>
+      Made for the women they love.<br/>
+      <em>Houston · 2026</em>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <!-- v1 -->
+    <a class="card" href="chemistrie.html">
+      <div class="card__visual">
+        <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+          <rect width="600" height="450" fill="#f9f4ed"/>
+          <circle cx="500" cy="80" r="120" fill="#6c8f7b" opacity=".25"/>
+          <circle cx="80" cy="380" r="110" fill="#c8aa7a" opacity=".18"/>
+          <text x="300" y="160" text-anchor="middle" font-family="Cormorant Garamond" font-size="78" font-weight="500" fill="#1a3a2d" letter-spacing="18">CHEMISTRIE</text>
+          <line x1="220" y1="200" x2="280" y2="200" stroke="#c8aa7a" stroke-width="1"/>
+          <text x="300" y="220" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="16" fill="#1a3a2d">Made by pharmacists. Made for the women they love.</text>
+          <line x1="320" y1="200" x2="380" y2="200" stroke="#c8aa7a" stroke-width="1"/>
+          <!-- product bottles row -->
+          <g transform="translate(140 290)">
+            <rect width="30" height="100" rx="2" fill="#1a3a2d"/>
+            <rect x="3" y="40" width="24" height="40" fill="#f9f4ed"/>
+          </g>
+          <g transform="translate(200 290)">
+            <rect width="30" height="100" rx="2" fill="#6c8f7b"/>
+            <rect x="3" y="40" width="24" height="40" fill="#f9f4ed"/>
+          </g>
+          <g transform="translate(260 290)">
+            <rect width="30" height="100" rx="2" fill="#c8aa7a"/>
+            <rect x="3" y="40" width="24" height="40" fill="#f9f4ed"/>
+          </g>
+          <g transform="translate(320 290)">
+            <rect width="30" height="100" rx="2" fill="#1a3a2d"/>
+            <rect x="3" y="40" width="24" height="40" fill="#f9f4ed"/>
+          </g>
+          <g transform="translate(380 290)">
+            <rect width="30" height="100" rx="2" fill="#6c8f7b"/>
+            <rect x="3" y="40" width="24" height="40" fill="#f9f4ed"/>
+          </g>
+          <g transform="translate(440 290)">
+            <rect width="30" height="100" rx="2" fill="#c8aa7a"/>
+            <rect x="3" y="40" width="24" height="40" fill="#f9f4ed"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card__body">
+        <span class="card__num">v.01</span>
+        <h3 class="card__name">The Boutique</h3>
+        <span class="card__tag">— Sticky pillars · horizontal ritual · periodic actives</span>
+        <p class="card__desc">A polished marketing homepage with sticky-stacking brand pillars, a pinned horizontal ritual section, a periodic-table of actives, and animated number proof points. Closest to a classic e-com flagship.</p>
+        <ul class="card__sections">
+          <li><i>01</i>Wordmark hero · letter-by-letter reveal</li>
+          <li><i>02</i>Vision · italic word-by-word fill</li>
+          <li><i>03</i>Trust / Luxury / Warmth pillars</li>
+          <li><i>04</i>Six-product collection grid</li>
+          <li><i>05</i>Active Index · periodic-table</li>
+          <li><i>06</i>Pinned horizontal ritual</li>
+          <li><i>07</i>Testimonials marquee</li>
+        </ul>
+        <span class="card__cta">Open v.01 →</span>
+      </div>
+    </a>
+
+    <!-- v2 -->
+    <a class="card" href="v2/chemistrie-v2.html">
+      <div class="card__visual">
+        <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+          <rect width="600" height="450" fill="#f9f4ed"/>
+          <!-- editorial split -->
+          <rect x="300" y="0" width="300" height="450" fill="#f3ecdf"/>
+          <line x1="300" y1="0" x2="300" y2="450" stroke="#1a3a2d" stroke-width="0.5" opacity=".3"/>
+          <!-- left text -->
+          <text x="40" y="50" font-family="JetBrains Mono" font-size="10" fill="#a78a5e" letter-spacing="2.5">— N°002 · COVER STORY</text>
+          <text x="40" y="120" font-family="Cormorant Garamond" font-size="58" font-weight="500" fill="#1a3a2d">Made <tspan font-style="italic" fill="#c8aa7a">by</tspan></text>
+          <text x="40" y="170" font-family="Cormorant Garamond" font-size="58" font-weight="500" fill="#1a3a2d">pharmacists.</text>
+          <text x="40" y="220" font-family="Cormorant Garamond" font-size="58" font-weight="500" fill="#1a3a2d">Made <tspan stroke="#1a3a2d" stroke-width="1" fill="none">for</tspan> the</text>
+          <text x="40" y="270" font-family="Cormorant Garamond" font-size="58" font-weight="500" fill="#1a3a2d">women they <tspan font-style="italic" fill="#c8aa7a">love.</tspan></text>
+          <text x="40" y="320" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#1a3a2d">An editorial of pharmaceutical-grade actives,</text>
+          <text x="40" y="338" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#1a3a2d">hand-numbered batches, and love letters.</text>
+          <line x1="40" y1="380" x2="280" y2="380" stroke="#1a3a2d" stroke-width="0.5"/>
+          <text x="40" y="400" font-family="JetBrains Mono" font-size="9" fill="#a78a5e" letter-spacing="2">PHOTOGRAPHED BY — STUDIO FAUNE</text>
+          <text x="40" y="416" font-family="JetBrains Mono" font-size="9" fill="#1a3a2d" letter-spacing="2">PAGES 04–112 · OPEN THE ISSUE →</text>
+          <!-- right bottle on tan -->
+          <g transform="translate(450 220)">
+            <rect x="-30" y="-60" width="60" height="50" rx="3" fill="#c8aa7a"/>
+            <rect x="-50" y="-10" width="100" height="180" rx="4" fill="#1a3a2d"/>
+            <rect x="-30" y="50" width="60" height="80" fill="#f9f4ed"/>
+            <text y="80" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#1a3a2d">No. 01</text>
+            <line x1="-15" y1="86" x2="15" y2="86" stroke="#c8aa7a" stroke-width="0.4"/>
+            <text y="106" text-anchor="middle" font-family="Cormorant Garamond" font-size="9" fill="#1a3a2d" letter-spacing="2">RENEWAL SERUM</text>
+          </g>
+          <text x="570" y="30" text-anchor="end" font-family="Cormorant Garamond" font-style="italic" font-size="20" fill="#1a3a2d">— 04</text>
+        </svg>
+      </div>
+      <div class="card__body">
+        <span class="card__num">v.02</span>
+        <h3 class="card__name">The Editorial</h3>
+        <span class="card__tag">— Magazine spread · TOC · anatomy · glossary</span>
+        <p class="card__desc">A printed-magazine homepage. Cover spread with stroked typography, table of contents, drop-cap manifesto, an annotated bottle dissection, a four-frame photo essay, A-Z glossary, and a member card.</p>
+        <ul class="card__sections">
+          <li><i>01</i>Editorial cover spread</li>
+          <li><i>02</i>Table of Contents</li>
+          <li><i>03</i>Drop-cap manifesto essay</li>
+          <li><i>04</i>Anatomy of a Bottle · 8 annotations</li>
+          <li><i>05</i>Photo Essay · 4-frame diptych</li>
+          <li><i>06</i>Long-form Q&amp;A interview</li>
+          <li><i>07</i>A–Z glossary index</li>
+          <li><i>08</i>Subscriber card mockup</li>
+        </ul>
+        <span class="card__cta">Open v.02 →</span>
+      </div>
+    </a>
+
+    <!-- v3 -->
+    <a class="card card--dark" href="v3/chemistrie-v3.html">
+      <div class="card__visual">
+        <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="cinBg2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0a1812"/>
+              <stop offset=".5" stop-color="#0e2118"/>
+              <stop offset="1" stop-color="#1a3a2d"/>
+            </linearGradient>
+            <radialGradient id="glow2" cx="0.7" cy="0.4" r="0.6">
+              <stop offset="0" stop-color="#c8aa7a" stop-opacity=".3"/>
+              <stop offset="1" stop-color="#c8aa7a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="600" height="450" fill="url(#cinBg2)"/>
+          <rect width="600" height="450" fill="url(#glow2)"/>
+          <!-- particles -->
+          <circle cx="80" cy="100" r="1.5" fill="#c8aa7a"/>
+          <circle cx="180" cy="80" r="1" fill="#c8aa7a"/>
+          <circle cx="280" cy="120" r="1.4" fill="#c8aa7a"/>
+          <circle cx="480" cy="80" r="1" fill="#c8aa7a"/>
+          <circle cx="80" cy="240" r="1.2" fill="#c8aa7a"/>
+          <circle cx="220" cy="280" r="1" fill="#c8aa7a"/>
+          <!-- big text -->
+          <text x="40" y="200" font-family="Cormorant Garamond" font-size="50" font-weight="500" fill="#f9f4ed">Skincare that</text>
+          <text x="40" y="252" font-family="Cormorant Garamond" font-style="italic" font-size="50" fill="#c8aa7a">answers when</text>
+          <text x="40" y="304" font-family="Cormorant Garamond" font-size="50" font-weight="500" stroke="#f9f4ed" stroke-width="1.2" fill="none">she <tspan fill="#f9f4ed" stroke="none">calls.</tspan></text>
+          <line x1="40" y1="350" x2="80" y2="350" stroke="#c8aa7a" stroke-width="1"/>
+          <text x="100" y="354" font-family="JetBrains Mono" font-size="9" fill="#c8aa7a" letter-spacing="2.5">THE CONCIERGE — A PHARMACIST FOR THE WOMEN YOU LOVE</text>
+          <text x="40" y="394" font-family="JetBrains Mono" font-size="9" fill="#dec39a" letter-spacing="2">BEGIN THE CONSULTATION →</text>
+          <!-- bottle right -->
+          <g transform="translate(470 280)" opacity=".9">
+            <rect x="-20" y="-70" width="40" height="32" rx="3" fill="#dec39a"/>
+            <rect x="-32" y="-38" width="64" height="120" rx="4" fill="#1a3a2d"/>
+            <rect x="-22" y="20" width="44" height="50" fill="#f9f4ed"/>
+            <text y="42" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#1a3a2d">No. 01</text>
+            <line x1="-12" y1="48" x2="12" y2="48" stroke="#c8aa7a" stroke-width="0.4"/>
+            <text y="62" text-anchor="middle" font-family="Cormorant Garamond" font-size="6.5" fill="#1a3a2d" letter-spacing="1.5">RENEWAL SERUM</text>
+          </g>
+          <!-- bottom strip -->
+          <line x1="40" y1="430" x2="120" y2="430" stroke="#c8aa7a" stroke-width="0.5"/>
+          <text x="40" y="428" font-family="JetBrains Mono" font-size="8" fill="#c8aa7a" letter-spacing="2">● LIVE — A PHARMACIST IS ON THE LINE</text>
+        </svg>
+      </div>
+      <div class="card__body">
+        <span class="card__num">v.03</span>
+        <h3 class="card__name">The Concierge</h3>
+        <span class="card__tag">— Cinematic dark · quiz · slider · countdown · booking</span>
+        <p class="card__desc">A dark, cinematic, service-led homepage. Full-bleed hero, interactive 3-step skin quiz, draggable before/after slider, ritual builder with live totals, live limited-drop countdown, and an actual consultation booking calendar.</p>
+        <ul class="card__sections">
+          <li><i>01</i>Cinematic full-bleed hero</li>
+          <li><i>02</i>Pharmacist's welcome letter</li>
+          <li><i>03</i>3-step interactive skin quiz</li>
+          <li><i>04</i>Draggable before / after slider</li>
+          <li><i>05</i>Ritual builder · live totals</li>
+          <li><i>06</i>Live limited-drop countdown</li>
+          <li><i>07</i>Consult booking calendar</li>
+          <li><i>08</i>Member tiers — Initiate · Devotee · Maison</li>
+        </ul>
+        <span class="card__cta">Open v.03 →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer class="foot">
+    <span>© Chemistrie LLC · <em>2026</em> · Compounded in Houston</span>
+    <span>Three directions · <em>One brand</em></span>
+    <span>Built for Shopify · HTML + GSAP + Lenis</span>
+  </footer>
+</main>
+
+</body>
+</html>
