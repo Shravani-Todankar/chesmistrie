@@ -491,12 +491,49 @@
       scrollTrigger: { trigger: ".story__intro", start: "top 80%" },
     });
 
-    /* Vertical timeline rail draw — scales from 0 to 1 as user scrolls through */
-    gsap.fromTo(".story__chapters::before",
-      {},
-      {});
-    /* CSS pseudo can't be animated by GSAP — use scale on a real element via the chapters container */
     const chapters = $$(".story__chapter");
+    const chaptersEl = $(".story__chapters");
+
+    if (chaptersEl) {
+      const dot = document.createElement("span");
+      dot.className = "story__rail-dot";
+      chaptersEl.appendChild(dot);
+      dot.style.transition = "top 1.1s cubic-bezier(.22,1,.36,1), transform .35s ease";
+
+      function snapDotToActive() {
+        const containerRect = chaptersEl.getBoundingClientRect();
+        let closest = null;
+        let minDist = Infinity;
+        let activeIdx = 0;
+        chapters.forEach((ch, i) => {
+          const meta = ch.querySelector(".story__chapter-meta");
+          if (!meta) return;
+          const r = meta.getBoundingClientRect();
+          const center = r.top + r.height / 2;
+          const dist = Math.abs(center - window.innerHeight / 2);
+          if (dist < minDist) {
+            minDist = dist;
+            closest = meta;
+            activeIdx = i;
+          }
+        });
+        if (closest) {
+          const r = closest.getBoundingClientRect();
+          const top = r.top - containerRect.top + r.height / 2;
+          dot.style.top = top + "px";
+          /* progress = activeIdx / lastIdx */
+          const p = chapters.length > 1 ? activeIdx / (chapters.length - 1) : 0;
+          chaptersEl.style.setProperty("--p", p);
+        }
+      }
+
+      window.addEventListener("scroll", snapDotToActive, { passive: true });
+      if (lenis) lenis.on("scroll", snapDotToActive);
+      window.addEventListener("resize", snapDotToActive);
+      /* initial position */
+      requestAnimationFrame(() => requestAnimationFrame(snapDotToActive));
+    }
+
     chapters.forEach((ch, i) => {
       const isReverse = ch.classList.contains("story__chapter--reverse");
       const body = ch.querySelector(".story__chapter-body");
@@ -504,57 +541,44 @@
       const meta = ch.querySelector(".story__chapter-meta");
       const photoSvg = ch.querySelector(".story__chapter-photo svg");
 
-      /* Reveal: body slides from one side, photo from the other, meta scales up */
+      /* Set initial state IMMEDIATELY via inline styles so they're hidden before ScrollTrigger inits */
+      if (body) { body.style.opacity = "0"; body.style.transform = `translateX(${isReverse ? 60 : -60}px)`; }
+      if (photo) { photo.style.opacity = "0"; photo.style.transform = `translateX(${isReverse ? -60 : 60}px) scale(.92)`; }
+      if (meta) { meta.style.opacity = "0"; meta.style.transform = "scale(.4) rotate(-8deg)"; }
+
       if (body) {
-        gsap.fromTo(body,
-          { opacity: 0, x: isReverse ? 60 : -60 },
-          {
-            opacity: 1, x: 0,
-            duration: 1.2, ease: "power3.out",
-            scrollTrigger: { trigger: ch, start: "top 82%", toggleActions: "play none none reverse" },
-          });
+        gsap.to(body, {
+          opacity: 1, x: 0, duration: 1.2, ease: "power3.out",
+          scrollTrigger: { trigger: ch, start: "top 90%", once: true },
+        });
       }
       if (photo) {
-        gsap.fromTo(photo,
-          { opacity: 0, x: isReverse ? -60 : 60, scale: 0.92 },
-          {
-            opacity: 1, x: 0, scale: 1,
-            duration: 1.3, ease: "power3.out",
-            scrollTrigger: { trigger: ch, start: "top 82%", toggleActions: "play none none reverse" },
-          });
+        gsap.to(photo, {
+          opacity: 1, x: 0, scale: 1, duration: 1.3, ease: "power3.out",
+          scrollTrigger: { trigger: ch, start: "top 90%", once: true },
+        });
       }
       if (meta) {
-        gsap.fromTo(meta,
-          { opacity: 0, scale: 0.4, rotate: -8 },
-          {
-            opacity: 1, scale: 1, rotate: 0,
-            duration: 1.1, ease: "back.out(1.6)",
-            delay: 0.18,
-            scrollTrigger: { trigger: ch, start: "top 82%", toggleActions: "play none none reverse" },
-          });
+        gsap.to(meta, {
+          opacity: 1, scale: 1, rotate: 0, duration: 1.1, ease: "back.out(1.6)", delay: 0.18,
+          scrollTrigger: { trigger: ch, start: "top 90%", once: true },
+        });
       }
-      /* Photo parallax — gentle Y drift through scroll */
+      /* Photo parallax + entrance zoom */
       if (photoSvg) {
         gsap.to(photoSvg, {
-          yPercent: -14,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ch,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1,
-          },
+          yPercent: -14, ease: "none",
+          scrollTrigger: { trigger: ch, start: "top bottom", end: "bottom top", scrub: 1 },
         });
-        /* Subtle zoom on entry */
         gsap.fromTo(photoSvg,
           { scale: 1.08 },
-          {
-            scale: 1,
-            ease: "power2.out",
-            scrollTrigger: { trigger: ch, start: "top 90%", end: "top 40%", scrub: 1 },
-          });
+          { scale: 1, ease: "power2.out",
+            scrollTrigger: { trigger: ch, start: "top 90%", end: "top 40%", scrub: 1 } });
       }
     });
+
+    /* Refresh after a moment to catch any layout shifts */
+    setTimeout(() => ScrollTrigger.refresh(), 300);
   }
 
   /* ───── Proof — number counters ───── */  if (window.ScrollTrigger) {
